@@ -2,24 +2,25 @@
 # Please ignore this repo, its test only
 
 
-### Gerar as definições GTK
-- [ ] Precisa informar o nome da função
-- [ ] Precisa informar o nome da classe
-- [ ] Precisa informar os parametros
-- [ ] Precisa informar se é depreciado
+### Create def file of GTK
+- [ ] Find a way to parse headers or get some def from gtkmm (for example)
+- [ ] def need to tell if the name of function
+- [ ] def need to tell if the name of class
+- [ ] def need to tell if the parameters and the type of
+- [ ] def need to tell if function is deprecated from X version
 
-### Parsear as definições
-- [ ] Ler e organizar em um vetor
-- [ ] Criar arquivo serializado para utilização de cache
-- [ ] Criar definições de merge, para que possa ler outra definição e atualizar a do cache (atualização de versão)
+### Parse def file
+- [ ] Read and organize the vector
+- [ ] Create a cache file
+- [ ] Create a way to read new def file and update the cache, to do version upgrade
 
 ### Code gen
 - [ ] Utilize native language for errors and exceptions
 - [ ] Better parse of parameters and throw exceptions on errors
-- [ ] Criação dos namespaces das respectivas classes
-- [ ] Criar a classe GObject manualmente
-- [ ] Criação da forma de sobescrever um metodo
-- [ ] Criação da forma de ignorar um metodo NÃO IMPLEMENTADO
+- [ ] Use namesapces of classes
+- [ ] Create GObject manualy
+- [ ] Create a way to rewrite a method manualy
+- [ ] Create a list of methods to set it as "NOT IMPLEMENTED YET"
 
 ### Compile
 - [ ] Compile for linux

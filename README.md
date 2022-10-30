@@ -3,10 +3,10 @@
 
 
 ### Create def file of GTK
-- [ ] Find a way to parse headers or get some def from gtkmm (for example)
-- [ ] def need to tell if the name of function
-- [ ] def need to tell if the name of class
-- [ ] def need to tell if the parameters and the type of
+- [x] Find a way to parse headers or get some def from gtkmm (for example)
+- [x] def need to tell if the name of function
+- [x] def need to tell if the name of class
+- [x] def need to tell if the parameters and the type of
 - [ ] def need to tell if function is deprecated from X version
 
 ### Parse def file

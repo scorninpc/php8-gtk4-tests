@@ -117,38 +117,59 @@ foreach(preg_split("/((\r?\n)|(\r\n?))/", $contents) as $line){
 /**
  * add the c-name as key of array
  */
-$objects = [];
+$classes = [];
 foreach($parsed['object'] as $object) {
 	$name = $object['c-name'];
 	
-	$objects[$name] = $object;
-	$objects[$name]['methods'] = [];
+	$classes[$name] = $object;
+	$classes[$name]['methods'] = [];
 }
-
-
-
-
 
 
 
 /**
  * add methods on the same array of object
- * @ToDo some methods are static, interface or just a struct, so this is not on $objects (maybe add a list of objects to load from a file manually)
+ * @ToDo some methods are static, interface or just a struct, so this is not on $classes (maybe add a list of objects to load from a file manually)
  */
-foreach($parsed['method'] as $method) {
+foreach($parsed['method'] as $method_name => $method) {
 
-	$object_name = $method['of-object'];
+	$class_name = $method['of-object'];
 	
-	// verify if the object of this method are on $objects
-	if(!isset($objects[$object_name])) {
-		echo "[102] object " . $object_name . " not exists\n";
-		var_dump($method);
-		echo "\n\n";
-
-		$objects[$object_name] = [];
+	// verify if the object of this method are on $classes
+	if(!isset($classes[$class_name])) {
+		//echo "[102] object " . $class_name . " not exists\n";
+		// var_dump($method);
+		// echo "\n\n";
+		//$classes[$class_name] = [];
 		continue;
 	}
 
-	
+
+	// add the method to the object
+	$classes[$class_name]['methods'][$method_name] = $method;
 }
+
+
+/**
+ * create main C files of php extension
+ */
+
+
+ /**
+  * create object specific bind code
+  */
+foreach($classes as $class_name => $class) {
+
+	// create header file
+
+	// create code file
+
+	// add to include of extension
+
+	// add object and methods to the main
+
+}
+
+
+
 

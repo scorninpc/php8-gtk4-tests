@@ -149,6 +149,27 @@ foreach($parsed['method'] as $method_name => $method) {
 	$classes[$class_name]['methods'][$method_name] = $method;
 }
 
+/**
+ * order classes by hierarchy
+ */
+$pos = 0;
+while($pos < count($classes)) {
+
+
+	$test = $pos+1;
+	while($test < count($classes)) {
+
+		var_dump($classes[0]);
+		die();
+		$test++;
+
+	}
+
+	$pos++;
+
+
+}
+
 
 /**
  * create main C files of php extension

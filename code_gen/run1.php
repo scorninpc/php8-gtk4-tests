@@ -1,5 +1,14 @@
 <?php
 
+
+// $a = [1, 2, 3];
+
+// array_splice($a, 1, 0, [1.5]);
+
+// var_dump($a);
+
+// die();
+
 $file = "defs/gtk_methods.defs";
 $contents = file_get_contents($file);
 
@@ -150,6 +159,17 @@ foreach($parsed['method'] as $method_name => $method) {
 }
 
 /**
+ * Add classes to indexes
+ * 
+ * @verify use of array_values
+ */
+$objects = [];
+foreach($classes as $class) {
+	$objects[] = $class;
+}
+$classes = $objects;
+
+/**
  * order classes by hierarchy
  */
 $pos = 0;
@@ -157,11 +177,16 @@ while($pos < count($classes)) {
 
 
 	$test = $pos+1;
-	while($test < count($classes)) {
+	while($test >= 0) {
 
-		var_dump($classes[0]);
-		die();
-		$test++;
+		echo $classes[$test]['c-name'] . "\n";
+
+		// if parent of this, it this class
+		if($classes[$pos]['parent'] == ($classes[$test]['c-name'])) {
+			die($classes[$pos]['parent']);
+		}
+
+		$test--;
 
 	}
 

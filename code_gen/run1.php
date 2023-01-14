@@ -173,27 +173,40 @@ $classes = $objects;
  * order classes by hierarchy
  */
 $pos = 0;
-while($pos < count($classes)) {
+while($pos < count($classes)-1) {
 
+	if(!isset($classes[$pos]['parent'])) {
+		$classes[$pos]['parent'] = "GObject";
+
+		$object = $classes[$pos];
+		unset($classes[$pos]);
+
+		array_splice($classes, 0, 0, [$object]);
+		
+		$pos++;
+		continue;
+	}
 
 	$test = $pos+1;
 	while($test >= 0) {
 
-		echo $classes[$test]['c-name'] . "\n";
-
 		// if parent of this, it this class
 		if($classes[$pos]['parent'] == ($classes[$test]['c-name'])) {
-			die($classes[$pos]['parent']);
+
+			$object = $classes[$pos];
+			unset($classes[$pos]);
+
+			array_splice($classes, $test+1, 0, [$object]);
 		}
 
 		$test--;
-
 	}
 
 	$pos++;
-
-
 }
+
+
+
 
 
 /**
@@ -204,7 +217,7 @@ while($pos < count($classes)) {
  /**
   * create object specific bind code
   */
-foreach($classes as $class_name => $class) {
+foreach($classes as $class) {
 
 	// create header file
 
@@ -214,6 +227,12 @@ foreach($classes as $class_name => $class) {
 
 	// add object and methods to the main
 
+	if(isset($class['parent'])) {
+		echo $class['c-name'] . " (parent of " . $class['parent'] . ")\n";
+	}
+	else {
+		echo $class['c-name'] . " (parent of GObject)\n";
+	}
 }
 
 

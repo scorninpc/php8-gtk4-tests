@@ -10,7 +10,8 @@
 - [ ] def need to tell if function is deprecated from X version
 
 ### Parse def file
-- [ ] Read and organize the vector
+- [x] Read and organize the vector of objects
+- [ ] Read and organize the vector of enums
 - [ ] Create a cache file
 - [ ] Create a way to read new def file and update the cache, to do version upgrade
 

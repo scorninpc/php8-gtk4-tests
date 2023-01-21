@@ -1,5 +1,18 @@
 <?php
 
+function vsprintf_named($format, $args) 
+{
+	$names = preg_match_all('/%\((.*?)\)/', $format, $matches, PREG_SET_ORDER);
+
+	$values = array();
+	foreach($matches as $match) {
+		$values[] = $args[$match[1]];
+	}
+
+	$format = preg_replace('/%\((.*?)\)/', '%', $format);
+	return vsprintf($format, $values);
+}
+
 function explodeCamelCase($string)
 {
 	$re = '/(?<=[a-z])(?=[A-Z]) | (?<=[A-Z])(?=[A-Z][a-z])/x';
@@ -35,6 +48,91 @@ function toCamelCase($string)
     return $str;
 }
 
+function getCleanType($type, $removePointer=TRUE)
+{
+	$type = str_replace("const", "", $type);
+	if($removePointer) {
+		$type = str_replace("*", "", $type);
+	}
+	$type = rtrim(ltrim($type));
+
+	return $type;
+}
+
+function parseParam($count, $param_name, $param_type)
+{
+	global $existing_constants;
+
+	// Remove constant key
+	$type = getCleanType($param_type, FALSE);
+	$name = $param_name;
+	
+	$template_code = "";
+
+	// Verifica o tipo
+	switch($type) {
+
+		// String
+		case "gchar*":
+			$template_code .= "std::string c_%(param_name)s = parameters[%(param_count)s];\n";
+			$template_code .= "gchar *%(param_name)s = (gchar *)c_%(param_name)s.c_str();";
+			break;
+
+		// Float
+		case "gfloat":
+			$template_code .= "double c_%(param_name)s = parameters[%(param_count)s];\n";
+			$template_code .= "gfloat %(param_name)s = (float)d_%(param_name)s;";
+			break;
+
+		// Some simple casts
+		case "guint":
+		case "gint":
+		case "gboolean":
+			$template_code .= "%(type)s %(param_name)s = (%(type)s)parameters[%(param_count)s];";
+			break;
+
+		// Others
+		default:
+			die($type . " cannot be parsed on parseParam function [" . __FILE__ . ":" . __LINE__ . "]\n");
+
+	}
+
+	$result_code = vsprintf_named($template_code, [
+		'param_count' => $count,
+		'param_name' => $name,
+		'type' => $type,
+	]);
+
+	return $result_code;
+}
+
+function parseReturn($return_type)
+{
+	$type = getCleanType($return_type, FALSE);
+	
+	// verify the type
+	switch($type) {
+		// normal returns
+		case "gchar*":
+		case "gfloat":
+		case "guint":
+		case "gint":
+		case "gboolean":
+			return "\n\treturn ret;";
+
+		// this can be any class, not enum, not interface
+		// @todo need to verify on array of classes if its exists
+		default:
+			
+			$str = "\n";
+			$str .= "\t" . $type . "_ *phpgtk_ret = new " . $type . "_();\n";
+			$str .= "\tphpgtk_ret->set_instance((gpointer *)ret);\n";
+			$str .= "\treturn Php::Object(\"" . $type . "\", phpgtk_ret);";
+
+			return $str;
+	}
+}
+
 
 // $a = [1, 2, 3];
 
@@ -43,9 +141,19 @@ function toCamelCase($string)
 // var_dump($a);
 
 // die();
-
-$file = "defs/gtk_methods.defs";
-$contents = file_get_contents($file);
+$files = [
+	"defs/gdk_methods.defs",
+	"defs/gdk_methods.defs",
+	"defs/gtk_methods.defs",
+	"defs/gtk_enums.defs",
+];
+$contents = "";
+foreach($files as $file) {
+	$contents .= file_get_contents($file);
+}
+// $file = "defs/gtk_methods.defs";
+// $contents = file_get_contents($file);
+$src_dir = "../src/";
 
 /**
  * Parse def file
@@ -158,6 +266,13 @@ foreach(preg_split("/((\r?\n)|(\r\n?))/", $contents) as $line){
 	}
 } 
 
+
+var_dump($parsed['enums']);
+die();
+
+
+
+
 /**
  * add the c-name as key of array
  */
@@ -233,6 +348,11 @@ $classes['GtkPrint'] = ['c-name' => "GtkPrint", 'methods' => [], ];
 $classes['Gtk'] = ['c-name' => "Gtk", 'methods' => [], ];
 
 
+// methods to ignore
+$ignored_methods = [
+	"gtk_event_box_get_type"
+];
+
 /**
  * add methods on the same array of object
  * @ToDo some methods are static, interface or just a struct, so this is not on $classes (maybe add a list of objects to load from a file manually)
@@ -283,8 +403,6 @@ foreach($parsed['function'] as $function_name => $function) {
 	}
 }
 
-var_dump($parsed['function']);
-
 /**
  * Add classes to indexes
  * 
@@ -332,6 +450,159 @@ while($pos < count($classes)-1) {
 	$pos++;
 }
 
+/**
+ * TEST ONLY FOR GTKEVENTBOX
+ * 
+ * - VARS OF TEMPLATES
+ * classid => class name without _ and uppercase
+ * classname => name of class
+ * parentname => name of class of parent
+ * includes => includes files 
+ * methodsdef => list of definitions of methods
+ * methods => list of code of methods
+ * 
+ * methodname => name of method
+ * methodreturncast => cast of returned value of c function
+ * cfunction => function name
+ * 
+ * classregister => is a main.cpp register class
+ */
+$template_vars = [];
+foreach($classes as $class) {
+	if($class['c-name'] == "GtkSeparator") {
+		break;
+	}
+}
+
+// get object template vars
+$template_vars['classid'] = strtoupper($class['c-name']);
+$template_vars['classname'] = $class['c-name'];
+$template_vars['parentname'] = $class['parent'];
+$template_vars['methodsdef'] = "";
+$template_vars['methods'] = "";
+$template_vars['includes'] = "";
+$template_vars['classregister'] = "";
+
+
+$template_vars['classregister'] .= "\t\tPhp::Class<" . $class['c-name'] . "_> " . strtolower($class['c-name']) . "(\"" . $class['c-name'] . "\");\n";
+$template_vars['classregister'] .= "\t\t\t" . strtolower($class['c-name']) . ".extends(" . strtolower($class['parent']) . ");\n";
+
+$cast_method = strtoupper(implode("_", explodeCamelCase($class['c-name'])));
+
+// loop the methods
+foreach($class['methods'] as $method_name => $method) {
+
+	$str = "";
+
+	// verify if the method are on the list of not to be implemented
+	if(in_array($method['c-name'], $ignored_methods)) {
+		continue;
+	}
+
+	// verify if the method are on the list of manual include
+
+	// verify if is a constructor
+	if($method['is-constructor-of']??"" == $class['c-name']) {
+		$method_name = "__construct";
+	}
+
+	// Verify if has return
+	if($method['return-type'] == "none") {
+		$str .= "void";
+	}
+	else if($method_name == "__construct")
+	{
+		$str .= "void";
+	}
+	else { 
+		$str .= "Php::Value";
+	}
+
+	// create the method name
+	$str .= " " . $class['c-name'] . "_::" . $method_name;
+
+	// verify parameters
+	$str .= "(";
+	if(count($method['parameters']??[]) > 0) {
+		$str .= "Php::Parameters &parameters";
+	}
+	$str .= ")";
+
+	// add this to method definition
+	$template_vars['methodsdef'] .= "\t\t\t" . str_replace($class['c-name'] . "_::", "", $str) . ";\n";
+
+	// continue to write code 
+	$str .= "\n{";
+
+	// retriave parameters
+	foreach($method['parameters']??[] as $count => $parameter) {
+		$str .= "\n\t" . parseParam($count, $parameter['name'], $parameter['type']) . "\n";
+	}
+
+	// Verify if has return of c function
+	if($method['return-type'] == "none") {
+		$str .= "\n\t";
+	}
+	else if($method_name == "__construct") {
+		$str .= "\n\tinstance = (gpointer *)";
+	}
+	else { 
+		$str .= "\n\t" . $method['return-type'] . " ret = ";
+	}
+
+	// call the c function
+	$str .= $method['c-name'] . "(";
+	$hasparam = false;
+
+	if($method_name != "__construct") {
+		$hasparam = true;
+		$str .= $cast_method . "(instance), ";
+	}
+
+	foreach($method['parameters']??[] as $count => $parameter) {
+		$hasparam = true;
+		$str .= $parameter['name'] . ", ";
+	}
+	if($hasparam) {
+		$str = substr($str, 0, strlen($str) - 2);
+	}
+	$str .= ");";
+
+	// parse return of c function
+	if($method['return-type'] == "none") {
+		$str .= "";
+	}
+	else if($method_name == "__construct") {
+		$str .= "";
+	}
+	else { 
+		$str .= "\n" . parseReturn($method['return-type']);
+	}
+
+	// close method
+	$str .= "\n}";
+
+	// add method to the template var
+	$template_vars['methods'] .= $str . "\n\n";
+
+	// add method to registration
+	$template_vars['classregister'] .= "\t\t\t" . strtolower($class['c-name']) . ".method<&" . $class['c-name'] . "_::" . $method_name . ">(\"" . $method_name . "\");\n";
+}
+
+$header_template = include("./templates/header.php");
+$header = vsprintf_named($header_template, $template_vars);
+
+$code_template = include("./templates/code.php");
+$code = vsprintf_named($code_template, $template_vars);
+
+$header_file = $src_dir . $class['in-module'] . "/" . $class['c-name'] . ".h";
+$code_file = $src_dir . $class['in-module'] . "/" . $class['c-name'] . ".cpp";
+
+// write the files
+file_put_contents($header_file, $header);
+file_put_contents($code_file, $code);
+echo $template_vars['classregister'] . "\n";
+die();
 
 
 /**

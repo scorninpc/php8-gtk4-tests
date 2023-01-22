@@ -50,6 +50,7 @@ function toCamelCase($string)
 
 function getCleanType($type, $removePointer=TRUE)
 {
+	$type = str_replace("const-", "", $type);
 	$type = str_replace("const", "", $type);
 	if($removePointer) {
 		$type = str_replace("*", "", $type);
@@ -80,12 +81,21 @@ function parseParam($count, $param_name, $param_type)
 
 		// Float
 		case "gfloat":
-			$template_code .= "\n\tdouble c_%(param_name)s = parameters[%(param_count)s];\n";
+			$template_code .= "\n\tdouble d_%(param_name)s = parameters[%(param_count)s];\n";
 			$template_code .= "\n\tgfloat %(param_name)s = (float)d_%(param_name)s;";
 			break;
 
 		// Some simple casts
+		case "guint*":
+			$template_code .= "\n\t%(type)s %(param_name)s;";
+			break;
+
+		//
 		case "guint":
+			$template_code .= "\n\tguint %(param_name)s = (int)parameters[%(param_count)s];";
+			break;
+
+		// Some simple casts
 		case "gint":
 		case "gboolean":
 			$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s)parameters[%(param_count)s];";
@@ -97,8 +107,20 @@ function parseParam($count, $param_name, $param_type)
 				$template_code .= "\n\tint int_%(param_name)s = parameters[%(param_count)s];";
 				$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s) int_%(param_name)s;";
 			}
+			elseif(isClass($type)) {
+
+				$type = getCleanType($type, TRUE);
+				$cast_method = strtoupper(implode("_", explodeCamelCase($type)));
+
+				$template_code .= "\n\t" . $type . " *%(param_name)s;";
+				// $template_code .= "if(parameters.size() > 0) {";
+				$template_code .= "\n\tPhp::Value object_%(param_name)s = parameters[%(param_count)s];";
+				$template_code .= "\n\t" . $type . "_ *phpgtk_%(param_name)s = (" . $type . "_ *)object_%(param_name)s.implementation();";
+				$template_code .= "\n\t%(param_name)s = " . $cast_method . "(phpgtk_%(param_name)s->get_instance());";
+				// $template_code .= "}";
+			}
 			else {
-				die($type . " cannot be parsed on parseParam function [" . __FILE__ . ":" . __LINE__ . "]\n");
+				die($type . " [" . $name . "] cannot be parsed on parseParam function [" . __FILE__ . ":" . __LINE__ . "]\n");
 			}
 	}
 
@@ -129,6 +151,8 @@ function parseReturn($return_type)
 		// @todo need to verify on array of classes if its exists
 		default:
 			
+			$type = getCleanType($type);
+
 			$str = "\n";
 			$str .= "\t" . $type . "_ *phpgtk_ret = new " . $type . "_();\n";
 			$str .= "\tphpgtk_ret->set_instance((gpointer *)ret);\n";
@@ -144,6 +168,21 @@ function isEnum($type)
 
 	foreach($parsed['enum'] as $enum) {
 		if($type == $enum['c-name']) {
+			return TRUE;
+		}
+	}
+
+	return FALSE;
+}
+
+function isClass($type)
+{
+	global $classes;
+
+	$type = getCleanType($type, TRUE);
+
+	foreach($classes as $class) {
+		if($type == $class['c-name']) {
 			return TRUE;
 		}
 	}
@@ -368,6 +407,7 @@ $classes['GtkRequisition'] = ['c-name' => "GtkRequisition", 'methods' => [], ];
 $classes['GtkGradient'] = ['c-name' => "GtkGradient", 'methods' => [], ];
 $classes['GtkPaint'] = ['c-name' => "GtkPaint", 'methods' => [], ];
 $classes['GtkPrint'] = ['c-name' => "GtkPrint", 'methods' => [], ];
+$classes['GdkPixbuf'] = ['c-name' => "GdkPixbuf", 'parent'=>"GObject", 'methods' => [], ];
 $classes['Gtk'] = ['c-name' => "Gtk", 'methods' => [], ];
 
 
@@ -380,6 +420,16 @@ $ignored_methods = [
 	"gtk_tree_sortable_get_type",
 	"gtk_tree_sortable_set_sort_func",
 	"gtk_tree_sortable_set_default_sort_func",
+	"gtk_alignment_get_type",
+
+	"gtk_status_icon_set_from_gicon",
+	"gtk_status_icon_set_screen",
+	"gtk_status_icon_get_geometry",
+	"gtk_status_icon_new_from_gicon",
+	"gtk_status_icon_get_type",
+	"gtk_status_icon_get_gicon",
+	"gtk_status_icon_get_storage_type",
+	"gtk_status_icon_get_x11_window_id",
 ];
 
 /**
@@ -403,8 +453,6 @@ foreach($parsed['method'] as $method_name => $method) {
 	// add the method to the object
 	$classes[$class_name]['methods'][$method_name] = $method;
 }
-
-
 
 /**
  * Loop between functions, looking for function that can be added as method of a class
@@ -438,6 +486,7 @@ foreach($parsed['function'] as $function_name => $function) {
 
 	}
 }
+
 
 /**
  * Add classes to indexes
@@ -505,7 +554,7 @@ while($pos < count($classes)-1) {
  */
 $template_vars = [];
 foreach($classes as $class) {
-	if($class['c-name'] == "GtkTreeSortable") {
+	if($class['c-name'] == "GtkStatusIcon") {
 		break;
 	}
 }
@@ -543,41 +592,46 @@ foreach($class['methods'] as $method) {
 		$method_name = "__construct";
 	}
 
-	// Verify if has return
-	if($method['return-type'] == "none") {
-		$str .= "void";
-	}
-	else if($method_name == "__construct")
-	{
-		$str .= "void";
-	}
-	else { 
-		$str .= "Php::Value";
-	}
-
-	// create the method name
-	$str .= " " . $class['c-name'] . "_::" . $method_name;
-
-	// verify parameters
-	$str .= "(";
-	if(count($method['parameters']??[]) > 0) {
-		$str .= "Php::Parameters &parameters";
-	}
-	$str .= ")";
-
-	// add this to method definition
-	$template_vars['methodsdef'] .= "\t\t\t" . str_replace($class['c-name'] . "_::", "", $str) . ";\n";
-
-	// continue to write code 
-	$str .= "\n{";
-
 	// verify if the method are on the list of manual include
 	if(isset($overrides[$method['c-name']])) {
 		$str .= $overrides[$method['c-name']];
+
+		$tmp = rtrim(preg_split('#\r?\n#', ltrim($str, " \n\r"), 2)[0]);
+
+		$template_vars['methodsdef'] .= "\t\t\t" . str_replace($class['c-name'] . "_::", "", $tmp) . ";\n";
 	}
 	else {
 
+		// Verify if has return
+		if($method['return-type'] == "none") {
+			$str .= "void";
+		}
+		else if($method_name == "__construct")
+		{
+			$str .= "void";
+		}
+		else { 
+			$str .= "Php::Value";
+		}
+
+		// create the method name
+		$str .= " " . $class['c-name'] . "_::" . $method_name;
+
+		// verify parameters
+		$str .= "(";
+		if(count($method['parameters']??[]) > 0) {
+			$str .= "Php::Parameters &parameters";
+		}
+		$str .= ")";
+
+		// add this to method definition
+		$template_vars['methodsdef'] .= "\t\t\t" . str_replace($class['c-name'] . "_::", "", $str) . ";\n";
+
+		// continue to write code 
+		$str .= "\n{";
+			
 		// retriave parameters
+		var_dump($method);
 		foreach($method['parameters']??[] as $count => $parameter) {
 			$str .= parseParam($count, $parameter['name'], $parameter['type']) . "\n";
 		}
@@ -621,10 +675,10 @@ foreach($class['methods'] as $method) {
 		else { 
 			$str .= "\n" . parseReturn($method['return-type']);
 		}
-	}
 
-	// close method
-	$str .= "\n}";
+		// close method
+		$str .= "\n}";
+	}
 
 	// add method to the template var
 	$template_vars['methods'] .= $str . "\n\n";

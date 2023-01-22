@@ -1,0 +1,3 @@
+code_gen/debug.log
+src/Gtk/*
+!src/Gtk/.gitkeep

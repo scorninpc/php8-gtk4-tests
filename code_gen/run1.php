@@ -61,7 +61,7 @@ function getCleanType($type, $removePointer=TRUE)
 
 function parseParam($count, $param_name, $param_type)
 {
-	global $existing_constants;
+	global $parsed;
 
 	// Remove constant key
 	$type = getCleanType($param_type, FALSE);
@@ -74,27 +74,32 @@ function parseParam($count, $param_name, $param_type)
 
 		// String
 		case "gchar*":
-			$template_code .= "std::string c_%(param_name)s = parameters[%(param_count)s];\n";
-			$template_code .= "gchar *%(param_name)s = (gchar *)c_%(param_name)s.c_str();";
+			$template_code .= "\n\tstd::string c_%(param_name)s = parameters[%(param_count)s];\n";
+			$template_code .= "\n\tgchar *%(param_name)s = (gchar *)c_%(param_name)s.c_str();";
 			break;
 
 		// Float
 		case "gfloat":
-			$template_code .= "double c_%(param_name)s = parameters[%(param_count)s];\n";
-			$template_code .= "gfloat %(param_name)s = (float)d_%(param_name)s;";
+			$template_code .= "\n\tdouble c_%(param_name)s = parameters[%(param_count)s];\n";
+			$template_code .= "\n\tgfloat %(param_name)s = (float)d_%(param_name)s;";
 			break;
 
 		// Some simple casts
 		case "guint":
 		case "gint":
 		case "gboolean":
-			$template_code .= "%(type)s %(param_name)s = (%(type)s)parameters[%(param_count)s];";
+			$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s)parameters[%(param_count)s];";
 			break;
 
 		// Others
 		default:
-			die($type . " cannot be parsed on parseParam function [" . __FILE__ . ":" . __LINE__ . "]\n");
-
+			if(isEnum($type)) {
+				$template_code .= "\n\tint int_%(param_name)s = parameters[%(param_count)s];";
+				$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s) int_%(param_name)s;";
+			}
+			else {
+				die($type . " cannot be parsed on parseParam function [" . __FILE__ . ":" . __LINE__ . "]\n");
+			}
 	}
 
 	$result_code = vsprintf_named($template_code, [
@@ -133,6 +138,20 @@ function parseReturn($return_type)
 	}
 }
 
+function isEnum($type)
+{
+	global $parsed;
+
+	foreach($parsed['enum'] as $enum) {
+		if($type == $enum['c-name']) {
+			return TRUE;
+		}
+	}
+
+	return FALSE;
+
+}
+
 
 // $a = [1, 2, 3];
 
@@ -143,9 +162,9 @@ function parseReturn($return_type)
 // die();
 $files = [
 	"defs/gdk_methods.defs",
-	"defs/gdk_methods.defs",
+	// "defs/gdk_enums.defs",
 	"defs/gtk_methods.defs",
-	"defs/gtk_enums.defs",
+	// "defs/gtk_enums.defs",
 ];
 $contents = "";
 foreach($files as $file) {
@@ -226,13 +245,15 @@ foreach(preg_split("/((\r?\n)|(\r\n?))/", $contents) as $line){
 			// end of block
 			$state = "";
 
+			$tmp_options['name'] = $tmp_name;
+			
 			// add the object
-			$parsed[$tmp_type][$tmp_name] = $tmp_options;
+			$parsed[$tmp_type][$tmp_options['c-name']] = $tmp_options;
 			if(count($tmp_parameters) > 0) {
-				$parsed[$tmp_type][$tmp_name]['parameters'] = $tmp_parameters;
+				$parsed[$tmp_type][$tmp_options['c-name']]['parameters'] = $tmp_parameters;
 			}
 			if(count($tmp_values) > 0) {
-				$parsed[$tmp_type][$tmp_name]['values'] = $tmp_values;
+				$parsed[$tmp_type][$tmp_options['c-name']]['values'] = $tmp_values;
 			}
 
 			// restart
@@ -266,10 +287,12 @@ foreach(preg_split("/((\r?\n)|(\r\n?))/", $contents) as $line){
 	}
 } 
 
-
-var_dump($parsed['enums']);
-die();
-
+// var_dump($parsed['object']);
+// var_dump($parsed['enum']);
+// var_dump($parsed['flags']);
+// var_dump($parsed['function']);
+// var_dump($parsed['method']);
+// var_dump($parsed['method']);
 
 
 
@@ -350,7 +373,13 @@ $classes['Gtk'] = ['c-name' => "Gtk", 'methods' => [], ];
 
 // methods to ignore
 $ignored_methods = [
-	"gtk_event_box_get_type"
+	"gtk_event_box_get_type",
+	"gtk_separator_menu_item_get_type",
+	"gtk_separator_tool_item_get_type",
+	"gtk_separator_get_type",
+	"gtk_tree_sortable_get_type",
+	"gtk_tree_sortable_set_sort_func",
+	"gtk_tree_sortable_set_default_sort_func",
 ];
 
 /**
@@ -389,6 +418,13 @@ foreach($parsed['function'] as $function_name => $function) {
 	foreach($classes as $class_name => $class) {
 		
 		if(($pos = strpos($camel_function, $class_name)) !== FALSE) {
+
+			// if its a constructor, verify if its the class of then
+			if(isset($function['is-constructor-of'])) {
+				if($class_name != $function['is-constructor-of']) {
+					continue;
+				}
+			}
 
 			$method_name = substr($camel_function, strlen($class_name));
 			$method_name = explodeCamelCase($method_name);
@@ -469,10 +505,12 @@ while($pos < count($classes)-1) {
  */
 $template_vars = [];
 foreach($classes as $class) {
-	if($class['c-name'] == "GtkSeparator") {
+	if($class['c-name'] == "GtkTreeSortable") {
 		break;
 	}
 }
+
+$overrides = include("./overrides.php");
 
 // get object template vars
 $template_vars['classid'] = strtoupper($class['c-name']);
@@ -490,16 +528,15 @@ $template_vars['classregister'] .= "\t\t\t" . strtolower($class['c-name']) . ".e
 $cast_method = strtoupper(implode("_", explodeCamelCase($class['c-name'])));
 
 // loop the methods
-foreach($class['methods'] as $method_name => $method) {
+foreach($class['methods'] as $method) {
 
+	$method_name = $method['name'];
 	$str = "";
 
 	// verify if the method are on the list of not to be implemented
 	if(in_array($method['c-name'], $ignored_methods)) {
 		continue;
 	}
-
-	// verify if the method are on the list of manual include
 
 	// verify if is a constructor
 	if($method['is-constructor-of']??"" == $class['c-name']) {
@@ -534,49 +571,56 @@ foreach($class['methods'] as $method_name => $method) {
 	// continue to write code 
 	$str .= "\n{";
 
-	// retriave parameters
-	foreach($method['parameters']??[] as $count => $parameter) {
-		$str .= "\n\t" . parseParam($count, $parameter['name'], $parameter['type']) . "\n";
+	// verify if the method are on the list of manual include
+	if(isset($overrides[$method['c-name']])) {
+		$str .= $overrides[$method['c-name']];
 	}
+	else {
 
-	// Verify if has return of c function
-	if($method['return-type'] == "none") {
-		$str .= "\n\t";
-	}
-	else if($method_name == "__construct") {
-		$str .= "\n\tinstance = (gpointer *)";
-	}
-	else { 
-		$str .= "\n\t" . $method['return-type'] . " ret = ";
-	}
+		// retriave parameters
+		foreach($method['parameters']??[] as $count => $parameter) {
+			$str .= parseParam($count, $parameter['name'], $parameter['type']) . "\n";
+		}
 
-	// call the c function
-	$str .= $method['c-name'] . "(";
-	$hasparam = false;
+		// Verify if has return of c function
+		if($method['return-type'] == "none") {
+			$str .= "\n\t";
+		}
+		else if($method_name == "__construct") {
+			$str .= "\n\tinstance = (gpointer *)";
+		}
+		else { 
+			$str .= "\n\t" . $method['return-type'] . " ret = ";
+		}
 
-	if($method_name != "__construct") {
-		$hasparam = true;
-		$str .= $cast_method . "(instance), ";
-	}
+		// call the c function
+		$str .= $method['c-name'] . "(";
+		$hasparam = false;
 
-	foreach($method['parameters']??[] as $count => $parameter) {
-		$hasparam = true;
-		$str .= $parameter['name'] . ", ";
-	}
-	if($hasparam) {
-		$str = substr($str, 0, strlen($str) - 2);
-	}
-	$str .= ");";
+		if($method_name != "__construct") {
+			$hasparam = true;
+			$str .= $cast_method . "(instance), ";
+		}
 
-	// parse return of c function
-	if($method['return-type'] == "none") {
-		$str .= "";
-	}
-	else if($method_name == "__construct") {
-		$str .= "";
-	}
-	else { 
-		$str .= "\n" . parseReturn($method['return-type']);
+		foreach($method['parameters']??[] as $count => $parameter) {
+			$hasparam = true;
+			$str .= $parameter['name'] . ", ";
+		}
+		if($hasparam) {
+			$str = substr($str, 0, strlen($str) - 2);
+		}
+		$str .= ");";
+
+		// parse return of c function
+		if($method['return-type'] == "none") {
+			$str .= "";
+		}
+		else if($method_name == "__construct") {
+			$str .= "";
+		}
+		else { 
+			$str .= "\n" . parseReturn($method['return-type']);
+		}
 	}
 
 	// close method

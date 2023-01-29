@@ -7,6 +7,8 @@ return "
 
 	#include <phpcpp.h>
     #include <gtk/gtk.h>
+    
+	#include \"../../php-gtk.h\"
 
 	%(includes)s
 

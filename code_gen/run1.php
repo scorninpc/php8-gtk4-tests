@@ -92,7 +92,7 @@ function parseParam($count, $param_name, $param_type)
 
 		//
 		case "guint":
-			$template_code .= "\n\tguint %(param_name)s = (int)parameters[%(param_count)s];";
+			$template_code .= "\n\tint %(param_name)s = (int)parameters[%(param_count)s];";
 			break;
 
 		// Some simple casts
@@ -154,9 +154,10 @@ function parseReturn($return_type)
 			$type = getCleanType($type);
 
 			$str = "\n";
-			$str .= "\t" . $type . "_ *phpgtk_ret = new " . $type . "_();\n";
-			$str .= "\tphpgtk_ret->set_instance((gpointer *)ret);\n";
-			$str .= "\treturn Php::Object(\"" . $type . "\", phpgtk_ret);";
+			$str .= "\n\treturn cobject_to_phpobject(ret);";
+			// $str .= "\t" . $type . "_ *phpgtk_ret = new " . $type . "_();\n";
+			// $str .= "\tphpgtk_ret->set_instance((gpointer *)ret);\n";
+			// $str .= "\treturn Php::Object(\"" . $type . "\", phpgtk_ret);";
 
 			return $str;
 	}
@@ -554,7 +555,7 @@ while($pos < count($classes)-1) {
  */
 $template_vars = [];
 foreach($classes as $class) {
-	if($class['c-name'] == "GtkStatusIcon") {
+	if($class['c-name'] == "GtkApplicationWindow") {
 		break;
 	}
 }
@@ -631,10 +632,12 @@ foreach($class['methods'] as $method) {
 		$str .= "\n{";
 			
 		// retriave parameters
-		var_dump($method);
+		// var_dump($method);
 		foreach($method['parameters']??[] as $count => $parameter) {
 			$str .= parseParam($count, $parameter['name'], $parameter['type']) . "\n";
 		}
+
+		$type = getCleanType($method['return-type'], FALSE);
 
 		// Verify if has return of c function
 		if($method['return-type'] == "none") {
@@ -642,6 +645,9 @@ foreach($class['methods'] as $method) {
 		}
 		else if($method_name == "__construct") {
 			$str .= "\n\tinstance = (gpointer *)";
+		}
+		else if(isClass($type)) {
+			$str .= "\n\tgpointer *ret = (gpointer *)";
 		}
 		else { 
 			$str .= "\n\t" . $method['return-type'] . " ret = ";

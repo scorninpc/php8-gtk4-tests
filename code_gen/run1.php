@@ -555,7 +555,7 @@ while($pos < count($classes)-1) {
  */
 $template_vars = [];
 foreach($classes as $class) {
-	if($class['c-name'] == "GtkApplicationWindow") {
+	if($class['c-name'] == "GtkTreePath") {
 		break;
 	}
 }

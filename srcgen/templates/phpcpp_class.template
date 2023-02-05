@@ -1,0 +1,3 @@
+
+		Php::Class<%(classname)s_> %(lower_classname)s("%(classname)s");
+            		%(lower_classname)s.extends(%(lower_parentname)s);

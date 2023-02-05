@@ -1,0 +1,6 @@
+#include "%(classname)s.h"
+
+%(classname)s_::%(classname)s_() = default;
+%(classname)s_::~%(classname)s_() = default;
+
+%(cpp_methods)s

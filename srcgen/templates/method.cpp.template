@@ -1,0 +1,5 @@
+
+%(method_return)s %(classname)s_::%(method_name)s(%(method_parameter)s)
+{
+	%(method_code)s
+}

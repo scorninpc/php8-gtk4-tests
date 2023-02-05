@@ -1,0 +1,2 @@
+
+			%(method_return)s %(method_name)s(%(method_parameter)s);

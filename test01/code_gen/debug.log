@@ -1,0 +1,6813 @@
+array(133) {
+  ["InputSource"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(14) "GdkInputSource"
+    ["gtype-id"]=>
+    string(21) "GDK_TYPE_INPUT_SOURCE"
+    ["values"]=>
+    array(9) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "mouse"
+        ["value"]=>
+        string(16) "GDK_SOURCE_MOUSE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(3) "pen"
+        ["value"]=>
+        string(14) "GDK_SOURCE_PEN"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "eraser"
+        ["value"]=>
+        string(17) "GDK_SOURCE_ERASER"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "cursor"
+        ["value"]=>
+        string(17) "GDK_SOURCE_CURSOR"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(8) "keyboard"
+        ["value"]=>
+        string(19) "GDK_SOURCE_KEYBOARD"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(11) "touchscreen"
+        ["value"]=>
+        string(22) "GDK_SOURCE_TOUCHSCREEN"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(8) "touchpad"
+        ["value"]=>
+        string(19) "GDK_SOURCE_TOUCHPAD"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(10) "trackpoint"
+        ["value"]=>
+        string(21) "GDK_SOURCE_TRACKPOINT"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(10) "tablet-pad"
+        ["value"]=>
+        string(21) "GDK_SOURCE_TABLET_PAD"
+      }
+    }
+  }
+  ["InputMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(12) "GdkInputMode"
+    ["gtype-id"]=>
+    string(19) "GDK_TYPE_INPUT_MODE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(8) "disabled"
+        ["value"]=>
+        string(17) "GDK_MODE_DISABLED"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "screen"
+        ["value"]=>
+        string(15) "GDK_MODE_SCREEN"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "window"
+        ["value"]=>
+        string(15) "GDK_MODE_WINDOW"
+      }
+    }
+  }
+  ["DeviceType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(13) "GdkDeviceType"
+    ["gtype-id"]=>
+    string(20) "GDK_TYPE_DEVICE_TYPE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "master"
+        ["value"]=>
+        string(22) "GDK_DEVICE_TYPE_MASTER"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "slave"
+        ["value"]=>
+        string(21) "GDK_DEVICE_TYPE_SLAVE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "floating"
+        ["value"]=>
+        string(24) "GDK_DEVICE_TYPE_FLOATING"
+      }
+    }
+  }
+  ["DevicePadFeature"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(19) "GdkDevicePadFeature"
+    ["gtype-id"]=>
+    string(27) "GDK_TYPE_DEVICE_PAD_FEATURE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "button"
+        ["value"]=>
+        string(29) "GDK_DEVICE_PAD_FEATURE_BUTTON"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "ring"
+        ["value"]=>
+        string(27) "GDK_DEVICE_PAD_FEATURE_RING"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "strip"
+        ["value"]=>
+        string(28) "GDK_DEVICE_PAD_FEATURE_STRIP"
+      }
+    }
+  }
+  ["DeviceToolType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(17) "GdkDeviceToolType"
+    ["gtype-id"]=>
+    string(25) "GDK_TYPE_DEVICE_TOOL_TYPE"
+    ["values"]=>
+    array(8) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "unknown"
+        ["value"]=>
+        string(28) "GDK_DEVICE_TOOL_TYPE_UNKNOWN"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(3) "pen"
+        ["value"]=>
+        string(24) "GDK_DEVICE_TOOL_TYPE_PEN"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "eraser"
+        ["value"]=>
+        string(27) "GDK_DEVICE_TOOL_TYPE_ERASER"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(5) "brush"
+        ["value"]=>
+        string(26) "GDK_DEVICE_TOOL_TYPE_BRUSH"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(6) "pencil"
+        ["value"]=>
+        string(27) "GDK_DEVICE_TOOL_TYPE_PENCIL"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(8) "airbrush"
+        ["value"]=>
+        string(29) "GDK_DEVICE_TOOL_TYPE_AIRBRUSH"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(5) "mouse"
+        ["value"]=>
+        string(26) "GDK_DEVICE_TOOL_TYPE_MOUSE"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(4) "lens"
+        ["value"]=>
+        string(25) "GDK_DEVICE_TOOL_TYPE_LENS"
+      }
+    }
+  }
+  ["DragCancelReason"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(19) "GdkDragCancelReason"
+    ["gtype-id"]=>
+    string(27) "GDK_TYPE_DRAG_CANCEL_REASON"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "no-target"
+        ["value"]=>
+        string(25) "GDK_DRAG_CANCEL_NO_TARGET"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(14) "user-cancelled"
+        ["value"]=>
+        string(30) "GDK_DRAG_CANCEL_USER_CANCELLED"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "error"
+        ["value"]=>
+        string(21) "GDK_DRAG_CANCEL_ERROR"
+      }
+    }
+  }
+  ["DragProtocol"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(15) "GdkDragProtocol"
+    ["gtype-id"]=>
+    string(22) "GDK_TYPE_DRAG_PROTOCOL"
+    ["values"]=>
+    array(8) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(19) "GDK_DRAG_PROTO_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "motif"
+        ["value"]=>
+        string(20) "GDK_DRAG_PROTO_MOTIF"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "xdnd"
+        ["value"]=>
+        string(19) "GDK_DRAG_PROTO_XDND"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(7) "rootwin"
+        ["value"]=>
+        string(22) "GDK_DRAG_PROTO_ROOTWIN"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(15) "win32-dropfiles"
+        ["value"]=>
+        string(30) "GDK_DRAG_PROTO_WIN32_DROPFILES"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(4) "ole2"
+        ["value"]=>
+        string(19) "GDK_DRAG_PROTO_OLE2"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(5) "local"
+        ["value"]=>
+        string(20) "GDK_DRAG_PROTO_LOCAL"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(7) "wayland"
+        ["value"]=>
+        string(22) "GDK_DRAG_PROTO_WAYLAND"
+      }
+    }
+  }
+  ["FilterReturn"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(15) "GdkFilterReturn"
+    ["gtype-id"]=>
+    string(22) "GDK_TYPE_FILTER_RETURN"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(8) "continue"
+        ["value"]=>
+        string(19) "GDK_FILTER_CONTINUE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "translate"
+        ["value"]=>
+        string(20) "GDK_FILTER_TRANSLATE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "remove"
+        ["value"]=>
+        string(17) "GDK_FILTER_REMOVE"
+      }
+    }
+  }
+  ["EventType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(12) "GdkEventType"
+    ["gtype-id"]=>
+    string(19) "GDK_TYPE_EVENT_TYPE"
+    ["values"]=>
+    array(51) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "nothing"
+        ["value"]=>
+        string(11) "GDK_NOTHING"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "delete"
+        ["value"]=>
+        string(10) "GDK_DELETE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(7) "destroy"
+        ["value"]=>
+        string(11) "GDK_DESTROY"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "expose"
+        ["value"]=>
+        string(10) "GDK_EXPOSE"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(13) "motion-notify"
+        ["value"]=>
+        string(17) "GDK_MOTION_NOTIFY"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(12) "button-press"
+        ["value"]=>
+        string(16) "GDK_BUTTON_PRESS"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(13) "2button-press"
+        ["value"]=>
+        string(17) "GDK_2BUTTON_PRESS"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(19) "double-button-press"
+        ["value"]=>
+        string(23) "GDK_DOUBLE_BUTTON_PRESS"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(13) "3button-press"
+        ["value"]=>
+        string(17) "GDK_3BUTTON_PRESS"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(19) "triple-button-press"
+        ["value"]=>
+        string(23) "GDK_TRIPLE_BUTTON_PRESS"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(14) "button-release"
+        ["value"]=>
+        string(18) "GDK_BUTTON_RELEASE"
+      }
+      [11]=>
+      array(2) {
+        ["name"]=>
+        string(9) "key-press"
+        ["value"]=>
+        string(13) "GDK_KEY_PRESS"
+      }
+      [12]=>
+      array(2) {
+        ["name"]=>
+        string(11) "key-release"
+        ["value"]=>
+        string(15) "GDK_KEY_RELEASE"
+      }
+      [13]=>
+      array(2) {
+        ["name"]=>
+        string(12) "enter-notify"
+        ["value"]=>
+        string(16) "GDK_ENTER_NOTIFY"
+      }
+      [14]=>
+      array(2) {
+        ["name"]=>
+        string(12) "leave-notify"
+        ["value"]=>
+        string(16) "GDK_LEAVE_NOTIFY"
+      }
+      [15]=>
+      array(2) {
+        ["name"]=>
+        string(12) "focus-change"
+        ["value"]=>
+        string(16) "GDK_FOCUS_CHANGE"
+      }
+      [16]=>
+      array(2) {
+        ["name"]=>
+        string(9) "configure"
+        ["value"]=>
+        string(13) "GDK_CONFIGURE"
+      }
+      [17]=>
+      array(2) {
+        ["name"]=>
+        string(3) "map"
+        ["value"]=>
+        string(7) "GDK_MAP"
+      }
+      [18]=>
+      array(2) {
+        ["name"]=>
+        string(5) "unmap"
+        ["value"]=>
+        string(9) "GDK_UNMAP"
+      }
+      [19]=>
+      array(2) {
+        ["name"]=>
+        string(15) "property-notify"
+        ["value"]=>
+        string(19) "GDK_PROPERTY_NOTIFY"
+      }
+      [20]=>
+      array(2) {
+        ["name"]=>
+        string(15) "selection-clear"
+        ["value"]=>
+        string(19) "GDK_SELECTION_CLEAR"
+      }
+      [21]=>
+      array(2) {
+        ["name"]=>
+        string(17) "selection-request"
+        ["value"]=>
+        string(21) "GDK_SELECTION_REQUEST"
+      }
+      [22]=>
+      array(2) {
+        ["name"]=>
+        string(16) "selection-notify"
+        ["value"]=>
+        string(20) "GDK_SELECTION_NOTIFY"
+      }
+      [23]=>
+      array(2) {
+        ["name"]=>
+        string(12) "proximity-in"
+        ["value"]=>
+        string(16) "GDK_PROXIMITY_IN"
+      }
+      [24]=>
+      array(2) {
+        ["name"]=>
+        string(13) "proximity-out"
+        ["value"]=>
+        string(17) "GDK_PROXIMITY_OUT"
+      }
+      [25]=>
+      array(2) {
+        ["name"]=>
+        string(10) "drag-enter"
+        ["value"]=>
+        string(14) "GDK_DRAG_ENTER"
+      }
+      [26]=>
+      array(2) {
+        ["name"]=>
+        string(10) "drag-leave"
+        ["value"]=>
+        string(14) "GDK_DRAG_LEAVE"
+      }
+      [27]=>
+      array(2) {
+        ["name"]=>
+        string(11) "drag-motion"
+        ["value"]=>
+        string(15) "GDK_DRAG_MOTION"
+      }
+      [28]=>
+      array(2) {
+        ["name"]=>
+        string(11) "drag-status"
+        ["value"]=>
+        string(15) "GDK_DRAG_STATUS"
+      }
+      [29]=>
+      array(2) {
+        ["name"]=>
+        string(10) "drop-start"
+        ["value"]=>
+        string(14) "GDK_DROP_START"
+      }
+      [30]=>
+      array(2) {
+        ["name"]=>
+        string(13) "drop-finished"
+        ["value"]=>
+        string(17) "GDK_DROP_FINISHED"
+      }
+      [31]=>
+      array(2) {
+        ["name"]=>
+        string(12) "client-event"
+        ["value"]=>
+        string(16) "GDK_CLIENT_EVENT"
+      }
+      [32]=>
+      array(2) {
+        ["name"]=>
+        string(17) "visibility-notify"
+        ["value"]=>
+        string(21) "GDK_VISIBILITY_NOTIFY"
+      }
+      [33]=>
+      array(2) {
+        ["name"]=>
+        string(6) "scroll"
+        ["value"]=>
+        string(10) "GDK_SCROLL"
+      }
+      [34]=>
+      array(2) {
+        ["name"]=>
+        string(12) "window-state"
+        ["value"]=>
+        string(16) "GDK_WINDOW_STATE"
+      }
+      [35]=>
+      array(2) {
+        ["name"]=>
+        string(7) "setting"
+        ["value"]=>
+        string(11) "GDK_SETTING"
+      }
+      [36]=>
+      array(2) {
+        ["name"]=>
+        string(12) "owner-change"
+        ["value"]=>
+        string(16) "GDK_OWNER_CHANGE"
+      }
+      [37]=>
+      array(2) {
+        ["name"]=>
+        string(11) "grab-broken"
+        ["value"]=>
+        string(15) "GDK_GRAB_BROKEN"
+      }
+      [38]=>
+      array(2) {
+        ["name"]=>
+        string(6) "damage"
+        ["value"]=>
+        string(10) "GDK_DAMAGE"
+      }
+      [39]=>
+      array(2) {
+        ["name"]=>
+        string(11) "touch-begin"
+        ["value"]=>
+        string(15) "GDK_TOUCH_BEGIN"
+      }
+      [40]=>
+      array(2) {
+        ["name"]=>
+        string(12) "touch-update"
+        ["value"]=>
+        string(16) "GDK_TOUCH_UPDATE"
+      }
+      [41]=>
+      array(2) {
+        ["name"]=>
+        string(9) "touch-end"
+        ["value"]=>
+        string(13) "GDK_TOUCH_END"
+      }
+      [42]=>
+      array(2) {
+        ["name"]=>
+        string(12) "touch-cancel"
+        ["value"]=>
+        string(16) "GDK_TOUCH_CANCEL"
+      }
+      [43]=>
+      array(2) {
+        ["name"]=>
+        string(14) "touchpad-swipe"
+        ["value"]=>
+        string(18) "GDK_TOUCHPAD_SWIPE"
+      }
+      [44]=>
+      array(2) {
+        ["name"]=>
+        string(14) "touchpad-pinch"
+        ["value"]=>
+        string(18) "GDK_TOUCHPAD_PINCH"
+      }
+      [45]=>
+      array(2) {
+        ["name"]=>
+        string(16) "pad-button-press"
+        ["value"]=>
+        string(20) "GDK_PAD_BUTTON_PRESS"
+      }
+      [46]=>
+      array(2) {
+        ["name"]=>
+        string(18) "pad-button-release"
+        ["value"]=>
+        string(22) "GDK_PAD_BUTTON_RELEASE"
+      }
+      [47]=>
+      array(2) {
+        ["name"]=>
+        string(8) "pad-ring"
+        ["value"]=>
+        string(12) "GDK_PAD_RING"
+      }
+      [48]=>
+      array(2) {
+        ["name"]=>
+        string(9) "pad-strip"
+        ["value"]=>
+        string(13) "GDK_PAD_STRIP"
+      }
+      [49]=>
+      array(2) {
+        ["name"]=>
+        string(14) "pad-group-mode"
+        ["value"]=>
+        string(18) "GDK_PAD_GROUP_MODE"
+      }
+      [50]=>
+      array(2) {
+        ["name"]=>
+        string(10) "event-last"
+        ["value"]=>
+        string(14) "GDK_EVENT_LAST"
+      }
+    }
+  }
+  ["VisibilityState"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(18) "GdkVisibilityState"
+    ["gtype-id"]=>
+    string(25) "GDK_TYPE_VISIBILITY_STATE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(10) "unobscured"
+        ["value"]=>
+        string(25) "GDK_VISIBILITY_UNOBSCURED"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "partial"
+        ["value"]=>
+        string(22) "GDK_VISIBILITY_PARTIAL"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(14) "fully-obscured"
+        ["value"]=>
+        string(29) "GDK_VISIBILITY_FULLY_OBSCURED"
+      }
+    }
+  }
+  ["TouchpadGesturePhase"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(23) "GdkTouchpadGesturePhase"
+    ["gtype-id"]=>
+    string(31) "GDK_TYPE_TOUCHPAD_GESTURE_PHASE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "begin"
+        ["value"]=>
+        string(32) "GDK_TOUCHPAD_GESTURE_PHASE_BEGIN"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "update"
+        ["value"]=>
+        string(33) "GDK_TOUCHPAD_GESTURE_PHASE_UPDATE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "end"
+        ["value"]=>
+        string(30) "GDK_TOUCHPAD_GESTURE_PHASE_END"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "cancel"
+        ["value"]=>
+        string(33) "GDK_TOUCHPAD_GESTURE_PHASE_CANCEL"
+      }
+    }
+  }
+  ["ScrollDirection"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(18) "GdkScrollDirection"
+    ["gtype-id"]=>
+    string(25) "GDK_TYPE_SCROLL_DIRECTION"
+    ["values"]=>
+    array(5) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(2) "up"
+        ["value"]=>
+        string(13) "GDK_SCROLL_UP"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "down"
+        ["value"]=>
+        string(15) "GDK_SCROLL_DOWN"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "left"
+        ["value"]=>
+        string(15) "GDK_SCROLL_LEFT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(5) "right"
+        ["value"]=>
+        string(16) "GDK_SCROLL_RIGHT"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(6) "smooth"
+        ["value"]=>
+        string(17) "GDK_SCROLL_SMOOTH"
+      }
+    }
+  }
+  ["NotifyType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(13) "GdkNotifyType"
+    ["gtype-id"]=>
+    string(20) "GDK_TYPE_NOTIFY_TYPE"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(8) "ancestor"
+        ["value"]=>
+        string(19) "GDK_NOTIFY_ANCESTOR"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "virtual"
+        ["value"]=>
+        string(18) "GDK_NOTIFY_VIRTUAL"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "inferior"
+        ["value"]=>
+        string(19) "GDK_NOTIFY_INFERIOR"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(9) "nonlinear"
+        ["value"]=>
+        string(20) "GDK_NOTIFY_NONLINEAR"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(17) "nonlinear-virtual"
+        ["value"]=>
+        string(28) "GDK_NOTIFY_NONLINEAR_VIRTUAL"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(7) "unknown"
+        ["value"]=>
+        string(18) "GDK_NOTIFY_UNKNOWN"
+      }
+    }
+  }
+  ["CrossingMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(15) "GdkCrossingMode"
+    ["gtype-id"]=>
+    string(22) "GDK_TYPE_CROSSING_MODE"
+    ["values"]=>
+    array(9) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "normal"
+        ["value"]=>
+        string(19) "GDK_CROSSING_NORMAL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "grab"
+        ["value"]=>
+        string(17) "GDK_CROSSING_GRAB"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "ungrab"
+        ["value"]=>
+        string(19) "GDK_CROSSING_UNGRAB"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(8) "gtk-grab"
+        ["value"]=>
+        string(21) "GDK_CROSSING_GTK_GRAB"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(10) "gtk-ungrab"
+        ["value"]=>
+        string(23) "GDK_CROSSING_GTK_UNGRAB"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(13) "state-changed"
+        ["value"]=>
+        string(26) "GDK_CROSSING_STATE_CHANGED"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(11) "touch-begin"
+        ["value"]=>
+        string(24) "GDK_CROSSING_TOUCH_BEGIN"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(9) "touch-end"
+        ["value"]=>
+        string(22) "GDK_CROSSING_TOUCH_END"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(13) "device-switch"
+        ["value"]=>
+        string(26) "GDK_CROSSING_DEVICE_SWITCH"
+      }
+    }
+  }
+  ["PropertyState"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(16) "GdkPropertyState"
+    ["gtype-id"]=>
+    string(23) "GDK_TYPE_PROPERTY_STATE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "new-value"
+        ["value"]=>
+        string(22) "GDK_PROPERTY_NEW_VALUE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "delete"
+        ["value"]=>
+        string(19) "GDK_PROPERTY_DELETE"
+      }
+    }
+  }
+  ["SettingAction"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(16) "GdkSettingAction"
+    ["gtype-id"]=>
+    string(23) "GDK_TYPE_SETTING_ACTION"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(3) "new"
+        ["value"]=>
+        string(22) "GDK_SETTING_ACTION_NEW"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "changed"
+        ["value"]=>
+        string(26) "GDK_SETTING_ACTION_CHANGED"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(7) "deleted"
+        ["value"]=>
+        string(26) "GDK_SETTING_ACTION_DELETED"
+      }
+    }
+  }
+  ["OwnerChange"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(14) "GdkOwnerChange"
+    ["gtype-id"]=>
+    string(21) "GDK_TYPE_OWNER_CHANGE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "new-owner"
+        ["value"]=>
+        string(26) "GDK_OWNER_CHANGE_NEW_OWNER"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "destroy"
+        ["value"]=>
+        string(24) "GDK_OWNER_CHANGE_DESTROY"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "close"
+        ["value"]=>
+        string(22) "GDK_OWNER_CHANGE_CLOSE"
+      }
+    }
+  }
+  ["SubpixelLayout"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(17) "GdkSubpixelLayout"
+    ["gtype-id"]=>
+    string(24) "GDK_TYPE_SUBPIXEL_LAYOUT"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "unknown"
+        ["value"]=>
+        string(27) "GDK_SUBPIXEL_LAYOUT_UNKNOWN"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(24) "GDK_SUBPIXEL_LAYOUT_NONE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(14) "horizontal-rgb"
+        ["value"]=>
+        string(34) "GDK_SUBPIXEL_LAYOUT_HORIZONTAL_RGB"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(14) "horizontal-bgr"
+        ["value"]=>
+        string(34) "GDK_SUBPIXEL_LAYOUT_HORIZONTAL_BGR"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(12) "vertical-rgb"
+        ["value"]=>
+        string(32) "GDK_SUBPIXEL_LAYOUT_VERTICAL_RGB"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(12) "vertical-bgr"
+        ["value"]=>
+        string(32) "GDK_SUBPIXEL_LAYOUT_VERTICAL_BGR"
+      }
+    }
+  }
+  ["PropMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(11) "GdkPropMode"
+    ["gtype-id"]=>
+    string(18) "GDK_TYPE_PROP_MODE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "replace"
+        ["value"]=>
+        string(21) "GDK_PROP_MODE_REPLACE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "prepend"
+        ["value"]=>
+        string(21) "GDK_PROP_MODE_PREPEND"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "append"
+        ["value"]=>
+        string(20) "GDK_PROP_MODE_APPEND"
+      }
+    }
+  }
+  ["ByteOrder"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(12) "GdkByteOrder"
+    ["gtype-id"]=>
+    string(19) "GDK_TYPE_BYTE_ORDER"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "lsb-first"
+        ["value"]=>
+        string(13) "GDK_LSB_FIRST"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "msb-first"
+        ["value"]=>
+        string(13) "GDK_MSB_FIRST"
+      }
+    }
+  }
+  ["ModifierIntent"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(17) "GdkModifierIntent"
+    ["gtype-id"]=>
+    string(24) "GDK_TYPE_MODIFIER_INTENT"
+    ["values"]=>
+    array(7) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(19) "primary-accelerator"
+        ["value"]=>
+        string(39) "GDK_MODIFIER_INTENT_PRIMARY_ACCELERATOR"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(12) "context-menu"
+        ["value"]=>
+        string(32) "GDK_MODIFIER_INTENT_CONTEXT_MENU"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(16) "extend-selection"
+        ["value"]=>
+        string(36) "GDK_MODIFIER_INTENT_EXTEND_SELECTION"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(16) "modify-selection"
+        ["value"]=>
+        string(36) "GDK_MODIFIER_INTENT_MODIFY_SELECTION"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(13) "no-text-input"
+        ["value"]=>
+        string(33) "GDK_MODIFIER_INTENT_NO_TEXT_INPUT"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(11) "shift-group"
+        ["value"]=>
+        string(31) "GDK_MODIFIER_INTENT_SHIFT_GROUP"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(16) "default-mod-mask"
+        ["value"]=>
+        string(36) "GDK_MODIFIER_INTENT_DEFAULT_MOD_MASK"
+      }
+    }
+  }
+  ["Status"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(9) "GdkStatus"
+    ["gtype-id"]=>
+    string(15) "GDK_TYPE_STATUS"
+    ["values"]=>
+    array(5) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(2) "ok"
+        ["value"]=>
+        string(6) "GDK_OK"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "error"
+        ["value"]=>
+        string(9) "GDK_ERROR"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(11) "error-param"
+        ["value"]=>
+        string(15) "GDK_ERROR_PARAM"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(10) "error-file"
+        ["value"]=>
+        string(14) "GDK_ERROR_FILE"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(9) "error-mem"
+        ["value"]=>
+        string(13) "GDK_ERROR_MEM"
+      }
+    }
+  }
+  ["GrabStatus"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(13) "GdkGrabStatus"
+    ["gtype-id"]=>
+    string(20) "GDK_TYPE_GRAB_STATUS"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "success"
+        ["value"]=>
+        string(16) "GDK_GRAB_SUCCESS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(15) "already-grabbed"
+        ["value"]=>
+        string(24) "GDK_GRAB_ALREADY_GRABBED"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(12) "invalid-time"
+        ["value"]=>
+        string(21) "GDK_GRAB_INVALID_TIME"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(12) "not-viewable"
+        ["value"]=>
+        string(21) "GDK_GRAB_NOT_VIEWABLE"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(6) "frozen"
+        ["value"]=>
+        string(15) "GDK_GRAB_FROZEN"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(6) "failed"
+        ["value"]=>
+        string(15) "GDK_GRAB_FAILED"
+      }
+    }
+  }
+  ["GrabOwnership"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(16) "GdkGrabOwnership"
+    ["gtype-id"]=>
+    string(23) "GDK_TYPE_GRAB_OWNERSHIP"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(18) "GDK_OWNERSHIP_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "window"
+        ["value"]=>
+        string(20) "GDK_OWNERSHIP_WINDOW"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(11) "application"
+        ["value"]=>
+        string(25) "GDK_OWNERSHIP_APPLICATION"
+      }
+    }
+  }
+  ["GLError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(10) "GdkGLError"
+    ["gtype-id"]=>
+    string(17) "GDK_TYPE_GL_ERROR"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(13) "not-available"
+        ["value"]=>
+        string(26) "GDK_GL_ERROR_NOT_AVAILABLE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(18) "unsupported-format"
+        ["value"]=>
+        string(31) "GDK_GL_ERROR_UNSUPPORTED_FORMAT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(19) "unsupported-profile"
+        ["value"]=>
+        string(32) "GDK_GL_ERROR_UNSUPPORTED_PROFILE"
+      }
+    }
+  }
+  ["WindowTypeHint"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(17) "GdkWindowTypeHint"
+    ["gtype-id"]=>
+    string(25) "GDK_TYPE_WINDOW_TYPE_HINT"
+    ["values"]=>
+    array(14) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "normal"
+        ["value"]=>
+        string(27) "GDK_WINDOW_TYPE_HINT_NORMAL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "dialog"
+        ["value"]=>
+        string(27) "GDK_WINDOW_TYPE_HINT_DIALOG"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "menu"
+        ["value"]=>
+        string(25) "GDK_WINDOW_TYPE_HINT_MENU"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(7) "toolbar"
+        ["value"]=>
+        string(28) "GDK_WINDOW_TYPE_HINT_TOOLBAR"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(12) "splashscreen"
+        ["value"]=>
+        string(33) "GDK_WINDOW_TYPE_HINT_SPLASHSCREEN"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(7) "utility"
+        ["value"]=>
+        string(28) "GDK_WINDOW_TYPE_HINT_UTILITY"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(4) "dock"
+        ["value"]=>
+        string(25) "GDK_WINDOW_TYPE_HINT_DOCK"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(7) "desktop"
+        ["value"]=>
+        string(28) "GDK_WINDOW_TYPE_HINT_DESKTOP"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(13) "dropdown-menu"
+        ["value"]=>
+        string(34) "GDK_WINDOW_TYPE_HINT_DROPDOWN_MENU"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(10) "popup-menu"
+        ["value"]=>
+        string(31) "GDK_WINDOW_TYPE_HINT_POPUP_MENU"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(7) "tooltip"
+        ["value"]=>
+        string(28) "GDK_WINDOW_TYPE_HINT_TOOLTIP"
+      }
+      [11]=>
+      array(2) {
+        ["name"]=>
+        string(12) "notification"
+        ["value"]=>
+        string(33) "GDK_WINDOW_TYPE_HINT_NOTIFICATION"
+      }
+      [12]=>
+      array(2) {
+        ["name"]=>
+        string(5) "combo"
+        ["value"]=>
+        string(26) "GDK_WINDOW_TYPE_HINT_COMBO"
+      }
+      [13]=>
+      array(2) {
+        ["name"]=>
+        string(3) "dnd"
+        ["value"]=>
+        string(24) "GDK_WINDOW_TYPE_HINT_DND"
+      }
+    }
+  }
+  ["AxisUse"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(10) "GdkAxisUse"
+    ["gtype-id"]=>
+    string(17) "GDK_TYPE_AXIS_USE"
+    ["values"]=>
+    array(11) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "ignore"
+        ["value"]=>
+        string(15) "GDK_AXIS_IGNORE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(1) "x"
+        ["value"]=>
+        string(10) "GDK_AXIS_X"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(1) "y"
+        ["value"]=>
+        string(10) "GDK_AXIS_Y"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(8) "pressure"
+        ["value"]=>
+        string(17) "GDK_AXIS_PRESSURE"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(5) "xtilt"
+        ["value"]=>
+        string(14) "GDK_AXIS_XTILT"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(5) "ytilt"
+        ["value"]=>
+        string(14) "GDK_AXIS_YTILT"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(5) "wheel"
+        ["value"]=>
+        string(14) "GDK_AXIS_WHEEL"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(8) "distance"
+        ["value"]=>
+        string(17) "GDK_AXIS_DISTANCE"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(8) "rotation"
+        ["value"]=>
+        string(17) "GDK_AXIS_ROTATION"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(6) "slider"
+        ["value"]=>
+        string(15) "GDK_AXIS_SLIDER"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(4) "last"
+        ["value"]=>
+        string(13) "GDK_AXIS_LAST"
+      }
+    }
+  }
+  ["VisualType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(13) "GdkVisualType"
+    ["gtype-id"]=>
+    string(20) "GDK_TYPE_VISUAL_TYPE"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(11) "static-gray"
+        ["value"]=>
+        string(22) "GDK_VISUAL_STATIC_GRAY"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "grayscale"
+        ["value"]=>
+        string(20) "GDK_VISUAL_GRAYSCALE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(12) "static-color"
+        ["value"]=>
+        string(23) "GDK_VISUAL_STATIC_COLOR"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(12) "pseudo-color"
+        ["value"]=>
+        string(23) "GDK_VISUAL_PSEUDO_COLOR"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(10) "true-color"
+        ["value"]=>
+        string(21) "GDK_VISUAL_TRUE_COLOR"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(12) "direct-color"
+        ["value"]=>
+        string(23) "GDK_VISUAL_DIRECT_COLOR"
+      }
+    }
+  }
+  ["WindowWindowClass"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(20) "GdkWindowWindowClass"
+    ["gtype-id"]=>
+    string(28) "GDK_TYPE_WINDOW_WINDOW_CLASS"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "output"
+        ["value"]=>
+        string(16) "GDK_INPUT_OUTPUT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "only"
+        ["value"]=>
+        string(14) "GDK_INPUT_ONLY"
+      }
+    }
+  }
+  ["WindowType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkWindowType"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_WINDOW_TYPE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(8) "toplevel"
+        ["value"]=>
+        string(19) "GTK_WINDOW_TOPLEVEL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "popup"
+        ["value"]=>
+        string(16) "GTK_WINDOW_POPUP"
+      }
+    }
+  }
+  ["Gravity"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(10) "GdkGravity"
+    ["gtype-id"]=>
+    string(16) "GDK_TYPE_GRAVITY"
+    ["values"]=>
+    array(10) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(10) "north-west"
+        ["value"]=>
+        string(22) "GDK_GRAVITY_NORTH_WEST"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "north"
+        ["value"]=>
+        string(17) "GDK_GRAVITY_NORTH"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(10) "north-east"
+        ["value"]=>
+        string(22) "GDK_GRAVITY_NORTH_EAST"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "west"
+        ["value"]=>
+        string(16) "GDK_GRAVITY_WEST"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(6) "center"
+        ["value"]=>
+        string(18) "GDK_GRAVITY_CENTER"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(4) "east"
+        ["value"]=>
+        string(16) "GDK_GRAVITY_EAST"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(10) "south-west"
+        ["value"]=>
+        string(22) "GDK_GRAVITY_SOUTH_WEST"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(5) "south"
+        ["value"]=>
+        string(17) "GDK_GRAVITY_SOUTH"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(10) "south-east"
+        ["value"]=>
+        string(22) "GDK_GRAVITY_SOUTH_EAST"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(6) "static"
+        ["value"]=>
+        string(18) "GDK_GRAVITY_STATIC"
+      }
+    }
+  }
+  ["WindowEdge"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(13) "GdkWindowEdge"
+    ["gtype-id"]=>
+    string(20) "GDK_TYPE_WINDOW_EDGE"
+    ["values"]=>
+    array(8) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(10) "north-west"
+        ["value"]=>
+        string(26) "GDK_WINDOW_EDGE_NORTH_WEST"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "north"
+        ["value"]=>
+        string(21) "GDK_WINDOW_EDGE_NORTH"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(10) "north-east"
+        ["value"]=>
+        string(26) "GDK_WINDOW_EDGE_NORTH_EAST"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "west"
+        ["value"]=>
+        string(20) "GDK_WINDOW_EDGE_WEST"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(4) "east"
+        ["value"]=>
+        string(20) "GDK_WINDOW_EDGE_EAST"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(10) "south-west"
+        ["value"]=>
+        string(26) "GDK_WINDOW_EDGE_SOUTH_WEST"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(5) "south"
+        ["value"]=>
+        string(21) "GDK_WINDOW_EDGE_SOUTH"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(10) "south-east"
+        ["value"]=>
+        string(26) "GDK_WINDOW_EDGE_SOUTH_EAST"
+      }
+    }
+  }
+  ["FullscreenMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(17) "GdkFullscreenMode"
+    ["gtype-id"]=>
+    string(24) "GDK_TYPE_FULLSCREEN_MODE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(15) "current-monitor"
+        ["value"]=>
+        string(33) "GDK_FULLSCREEN_ON_CURRENT_MONITOR"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(12) "all-monitors"
+        ["value"]=>
+        string(30) "GDK_FULLSCREEN_ON_ALL_MONITORS"
+      }
+    }
+  }
+  ["PixbufAlphaMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(18) "GdkPixbufAlphaMode"
+    ["gtype-id"]=>
+    string(26) "GDK_TYPE_PIXBUF_ALPHA_MODE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "bilevel"
+        ["value"]=>
+        string(24) "GDK_PIXBUF_ALPHA_BILEVEL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "full"
+        ["value"]=>
+        string(21) "GDK_PIXBUF_ALPHA_FULL"
+      }
+    }
+  }
+  ["Colorspace"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(13) "GdkColorspace"
+    ["gtype-id"]=>
+    string(19) "GDK_TYPE_COLORSPACE"
+    ["values"]=>
+    array(1) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(3) "rgb"
+        ["value"]=>
+        string(18) "GDK_COLORSPACE_RGB"
+      }
+    }
+  }
+  ["PixbufError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(14) "GdkPixbufError"
+    ["gtype-id"]=>
+    string(21) "GDK_TYPE_PIXBUF_ERROR"
+    ["values"]=>
+    array(7) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(13) "corrupt-image"
+        ["value"]=>
+        string(30) "GDK_PIXBUF_ERROR_CORRUPT_IMAGE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(19) "insufficient-memory"
+        ["value"]=>
+        string(36) "GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(10) "bad-option"
+        ["value"]=>
+        string(27) "GDK_PIXBUF_ERROR_BAD_OPTION"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(12) "unknown-type"
+        ["value"]=>
+        string(29) "GDK_PIXBUF_ERROR_UNKNOWN_TYPE"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(21) "unsupported-operation"
+        ["value"]=>
+        string(38) "GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(6) "failed"
+        ["value"]=>
+        string(23) "GDK_PIXBUF_ERROR_FAILED"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(20) "incomplete-animation"
+        ["value"]=>
+        string(37) "GDK_PIXBUF_ERROR_INCOMPLETE_ANIMATION"
+      }
+    }
+  }
+  ["InterpType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(13) "GdkInterpType"
+    ["gtype-id"]=>
+    string(20) "GDK_TYPE_INTERP_TYPE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "nearest"
+        ["value"]=>
+        string(18) "GDK_INTERP_NEAREST"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "tiles"
+        ["value"]=>
+        string(16) "GDK_INTERP_TILES"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "bilinear"
+        ["value"]=>
+        string(19) "GDK_INTERP_BILINEAR"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(5) "hyper"
+        ["value"]=>
+        string(16) "GDK_INTERP_HYPER"
+      }
+    }
+  }
+  ["PixbufRotation"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gdk"
+    ["c-name"]=>
+    string(17) "GdkPixbufRotation"
+    ["gtype-id"]=>
+    string(24) "GDK_TYPE_PIXBUF_ROTATION"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(22) "GDK_PIXBUF_ROTATE_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(16) "counterclockwise"
+        ["value"]=>
+        string(34) "GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(10) "upsidedown"
+        ["value"]=>
+        string(28) "GDK_PIXBUF_ROTATE_UPSIDEDOWN"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(9) "clockwise"
+        ["value"]=>
+        string(27) "GDK_PIXBUF_ROTATE_CLOCKWISE"
+      }
+    }
+  }
+  ["License"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(10) "GtkLicense"
+    ["gtype-id"]=>
+    string(16) "GTK_TYPE_LICENSE"
+    ["values"]=>
+    array(18) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "unknown"
+        ["value"]=>
+        string(19) "GTK_LICENSE_UNKNOWN"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "custom"
+        ["value"]=>
+        string(18) "GTK_LICENSE_CUSTOM"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(7) "gpl-2-0"
+        ["value"]=>
+        string(19) "GTK_LICENSE_GPL_2_0"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(7) "gpl-3-0"
+        ["value"]=>
+        string(19) "GTK_LICENSE_GPL_3_0"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(8) "lgpl-2-1"
+        ["value"]=>
+        string(20) "GTK_LICENSE_LGPL_2_1"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(8) "lgpl-3-0"
+        ["value"]=>
+        string(20) "GTK_LICENSE_LGPL_3_0"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(3) "bsd"
+        ["value"]=>
+        string(15) "GTK_LICENSE_BSD"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(7) "mit-x11"
+        ["value"]=>
+        string(19) "GTK_LICENSE_MIT_X11"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(8) "artistic"
+        ["value"]=>
+        string(20) "GTK_LICENSE_ARTISTIC"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(12) "gpl-2-0-only"
+        ["value"]=>
+        string(24) "GTK_LICENSE_GPL_2_0_ONLY"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(12) "gpl-3-0-only"
+        ["value"]=>
+        string(24) "GTK_LICENSE_GPL_3_0_ONLY"
+      }
+      [11]=>
+      array(2) {
+        ["name"]=>
+        string(13) "lgpl-2-1-only"
+        ["value"]=>
+        string(25) "GTK_LICENSE_LGPL_2_1_ONLY"
+      }
+      [12]=>
+      array(2) {
+        ["name"]=>
+        string(13) "lgpl-3-0-only"
+        ["value"]=>
+        string(25) "GTK_LICENSE_LGPL_3_0_ONLY"
+      }
+      [13]=>
+      array(2) {
+        ["name"]=>
+        string(8) "agpl-3-0"
+        ["value"]=>
+        string(20) "GTK_LICENSE_AGPL_3_0"
+      }
+      [14]=>
+      array(2) {
+        ["name"]=>
+        string(13) "agpl-3-0-only"
+        ["value"]=>
+        string(25) "GTK_LICENSE_AGPL_3_0_ONLY"
+      }
+      [15]=>
+      array(2) {
+        ["name"]=>
+        string(5) "bsd-3"
+        ["value"]=>
+        string(17) "GTK_LICENSE_BSD_3"
+      }
+      [16]=>
+      array(2) {
+        ["name"]=>
+        string(10) "apache-2-0"
+        ["value"]=>
+        string(22) "GTK_LICENSE_APACHE_2_0"
+      }
+      [17]=>
+      array(2) {
+        ["name"]=>
+        string(7) "mpl-2-0"
+        ["value"]=>
+        string(19) "GTK_LICENSE_MPL_2_0"
+      }
+    }
+  }
+  ["AssistantPageType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(20) "GtkAssistantPageType"
+    ["gtype-id"]=>
+    string(28) "GTK_TYPE_ASSISTANT_PAGE_TYPE"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "content"
+        ["value"]=>
+        string(26) "GTK_ASSISTANT_PAGE_CONTENT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "intro"
+        ["value"]=>
+        string(24) "GTK_ASSISTANT_PAGE_INTRO"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(7) "confirm"
+        ["value"]=>
+        string(26) "GTK_ASSISTANT_PAGE_CONFIRM"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(7) "summary"
+        ["value"]=>
+        string(26) "GTK_ASSISTANT_PAGE_SUMMARY"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(8) "progress"
+        ["value"]=>
+        string(27) "GTK_ASSISTANT_PAGE_PROGRESS"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(6) "custom"
+        ["value"]=>
+        string(25) "GTK_ASSISTANT_PAGE_CUSTOM"
+      }
+    }
+  }
+  ["ButtonBoxStyle"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkButtonBoxStyle"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_BUTTON_BOX_STYLE"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "spread"
+        ["value"]=>
+        string(20) "GTK_BUTTONBOX_SPREAD"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "edge"
+        ["value"]=>
+        string(18) "GTK_BUTTONBOX_EDGE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "start"
+        ["value"]=>
+        string(19) "GTK_BUTTONBOX_START"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(3) "end"
+        ["value"]=>
+        string(17) "GTK_BUTTONBOX_END"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(6) "center"
+        ["value"]=>
+        string(20) "GTK_BUTTONBOX_CENTER"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(6) "expand"
+        ["value"]=>
+        string(20) "GTK_BUTTONBOX_EXPAND"
+      }
+    }
+  }
+  ["BuilderError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkBuilderError"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_BUILDER_ERROR"
+    ["values"]=>
+    array(14) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(21) "invalid-type-function"
+        ["value"]=>
+        string(39) "GTK_BUILDER_ERROR_INVALID_TYPE_FUNCTION"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(13) "unhandled-tag"
+        ["value"]=>
+        string(31) "GTK_BUILDER_ERROR_UNHANDLED_TAG"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(17) "missing-attribute"
+        ["value"]=>
+        string(35) "GTK_BUILDER_ERROR_MISSING_ATTRIBUTE"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(17) "invalid-attribute"
+        ["value"]=>
+        string(35) "GTK_BUILDER_ERROR_INVALID_ATTRIBUTE"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(11) "invalid-tag"
+        ["value"]=>
+        string(29) "GTK_BUILDER_ERROR_INVALID_TAG"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(22) "missing-property-value"
+        ["value"]=>
+        string(40) "GTK_BUILDER_ERROR_MISSING_PROPERTY_VALUE"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(13) "invalid-value"
+        ["value"]=>
+        string(31) "GTK_BUILDER_ERROR_INVALID_VALUE"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(16) "version-mismatch"
+        ["value"]=>
+        string(34) "GTK_BUILDER_ERROR_VERSION_MISMATCH"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(12) "duplicate-id"
+        ["value"]=>
+        string(30) "GTK_BUILDER_ERROR_DUPLICATE_ID"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(19) "object-type-refused"
+        ["value"]=>
+        string(37) "GTK_BUILDER_ERROR_OBJECT_TYPE_REFUSED"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(17) "template-mismatch"
+        ["value"]=>
+        string(35) "GTK_BUILDER_ERROR_TEMPLATE_MISMATCH"
+      }
+      [11]=>
+      array(2) {
+        ["name"]=>
+        string(16) "invalid-property"
+        ["value"]=>
+        string(34) "GTK_BUILDER_ERROR_INVALID_PROPERTY"
+      }
+      [12]=>
+      array(2) {
+        ["name"]=>
+        string(14) "invalid-signal"
+        ["value"]=>
+        string(32) "GTK_BUILDER_ERROR_INVALID_SIGNAL"
+      }
+      [13]=>
+      array(2) {
+        ["name"]=>
+        string(10) "invalid-id"
+        ["value"]=>
+        string(28) "GTK_BUILDER_ERROR_INVALID_ID"
+      }
+    }
+  }
+  ["CellRendererAccelMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(24) "GtkCellRendererAccelMode"
+    ["gtype-id"]=>
+    string(33) "GTK_TYPE_CELL_RENDERER_ACCEL_MODE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(3) "gtk"
+        ["value"]=>
+        string(32) "GTK_CELL_RENDERER_ACCEL_MODE_GTK"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "other"
+        ["value"]=>
+        string(34) "GTK_CELL_RENDERER_ACCEL_MODE_OTHER"
+      }
+    }
+  }
+  ["CellRendererMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(19) "GtkCellRendererMode"
+    ["gtype-id"]=>
+    string(27) "GTK_TYPE_CELL_RENDERER_MODE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "inert"
+        ["value"]=>
+        string(28) "GTK_CELL_RENDERER_MODE_INERT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(11) "activatable"
+        ["value"]=>
+        string(34) "GTK_CELL_RENDERER_MODE_ACTIVATABLE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "editable"
+        ["value"]=>
+        string(31) "GTK_CELL_RENDERER_MODE_EDITABLE"
+      }
+    }
+  }
+  ["ResizeMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkResizeMode"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_RESIZE_MODE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "parent"
+        ["value"]=>
+        string(17) "GTK_RESIZE_PARENT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "queue"
+        ["value"]=>
+        string(16) "GTK_RESIZE_QUEUE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(9) "immediate"
+        ["value"]=>
+        string(20) "GTK_RESIZE_IMMEDIATE"
+      }
+    }
+  }
+  ["CssProviderError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(19) "GtkCssProviderError"
+    ["gtype-id"]=>
+    string(27) "GTK_TYPE_CSS_PROVIDER_ERROR"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "failed"
+        ["value"]=>
+        string(29) "GTK_CSS_PROVIDER_ERROR_FAILED"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "syntax"
+        ["value"]=>
+        string(29) "GTK_CSS_PROVIDER_ERROR_SYNTAX"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "import"
+        ["value"]=>
+        string(29) "GTK_CSS_PROVIDER_ERROR_IMPORT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "name"
+        ["value"]=>
+        string(27) "GTK_CSS_PROVIDER_ERROR_NAME"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(10) "deprecated"
+        ["value"]=>
+        string(33) "GTK_CSS_PROVIDER_ERROR_DEPRECATED"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(13) "unknown-value"
+        ["value"]=>
+        string(36) "GTK_CSS_PROVIDER_ERROR_UNKNOWN_VALUE"
+      }
+    }
+  }
+  ["CssSectionType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkCssSectionType"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_CSS_SECTION_TYPE"
+    ["values"]=>
+    array(9) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(8) "document"
+        ["value"]=>
+        string(24) "GTK_CSS_SECTION_DOCUMENT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "import"
+        ["value"]=>
+        string(22) "GTK_CSS_SECTION_IMPORT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(16) "color-definition"
+        ["value"]=>
+        string(32) "GTK_CSS_SECTION_COLOR_DEFINITION"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(11) "binding-set"
+        ["value"]=>
+        string(27) "GTK_CSS_SECTION_BINDING_SET"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(7) "ruleset"
+        ["value"]=>
+        string(23) "GTK_CSS_SECTION_RULESET"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(8) "selector"
+        ["value"]=>
+        string(24) "GTK_CSS_SECTION_SELECTOR"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(11) "declaration"
+        ["value"]=>
+        string(27) "GTK_CSS_SECTION_DECLARATION"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(5) "value"
+        ["value"]=>
+        string(21) "GTK_CSS_SECTION_VALUE"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(9) "keyframes"
+        ["value"]=>
+        string(25) "GTK_CSS_SECTION_KEYFRAMES"
+      }
+    }
+  }
+  ["ResponseType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkResponseType"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_RESPONSE_TYPE"
+    ["values"]=>
+    array(11) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(17) "GTK_RESPONSE_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "reject"
+        ["value"]=>
+        string(19) "GTK_RESPONSE_REJECT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "accept"
+        ["value"]=>
+        string(19) "GTK_RESPONSE_ACCEPT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(12) "delete-event"
+        ["value"]=>
+        string(25) "GTK_RESPONSE_DELETE_EVENT"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(2) "ok"
+        ["value"]=>
+        string(15) "GTK_RESPONSE_OK"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(6) "cancel"
+        ["value"]=>
+        string(19) "GTK_RESPONSE_CANCEL"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(5) "close"
+        ["value"]=>
+        string(18) "GTK_RESPONSE_CLOSE"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(3) "yes"
+        ["value"]=>
+        string(16) "GTK_RESPONSE_YES"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(2) "no"
+        ["value"]=>
+        string(15) "GTK_RESPONSE_NO"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(5) "apply"
+        ["value"]=>
+        string(18) "GTK_RESPONSE_APPLY"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(4) "help"
+        ["value"]=>
+        string(17) "GTK_RESPONSE_HELP"
+      }
+    }
+  }
+  ["EntryIconPosition"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(20) "GtkEntryIconPosition"
+    ["gtype-id"]=>
+    string(28) "GTK_TYPE_ENTRY_ICON_POSITION"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "primary"
+        ["value"]=>
+        string(22) "GTK_ENTRY_ICON_PRIMARY"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "secondary"
+        ["value"]=>
+        string(24) "GTK_ENTRY_ICON_SECONDARY"
+      }
+    }
+  }
+  ["Align"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(8) "GtkAlign"
+    ["gtype-id"]=>
+    string(14) "GTK_TYPE_ALIGN"
+    ["values"]=>
+    array(5) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "fill"
+        ["value"]=>
+        string(14) "GTK_ALIGN_FILL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "start"
+        ["value"]=>
+        string(15) "GTK_ALIGN_START"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "end"
+        ["value"]=>
+        string(13) "GTK_ALIGN_END"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "center"
+        ["value"]=>
+        string(16) "GTK_ALIGN_CENTER"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(8) "baseline"
+        ["value"]=>
+        string(18) "GTK_ALIGN_BASELINE"
+      }
+    }
+  }
+  ["ArrowType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(12) "GtkArrowType"
+    ["gtype-id"]=>
+    string(19) "GTK_TYPE_ARROW_TYPE"
+    ["values"]=>
+    array(5) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(2) "up"
+        ["value"]=>
+        string(12) "GTK_ARROW_UP"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "down"
+        ["value"]=>
+        string(14) "GTK_ARROW_DOWN"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "left"
+        ["value"]=>
+        string(14) "GTK_ARROW_LEFT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(5) "right"
+        ["value"]=>
+        string(15) "GTK_ARROW_RIGHT"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(14) "GTK_ARROW_NONE"
+      }
+    }
+  }
+  ["BaselinePosition"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(19) "GtkBaselinePosition"
+    ["gtype-id"]=>
+    string(26) "GTK_TYPE_BASELINE_POSITION"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(3) "top"
+        ["value"]=>
+        string(25) "GTK_BASELINE_POSITION_TOP"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "center"
+        ["value"]=>
+        string(28) "GTK_BASELINE_POSITION_CENTER"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "bottom"
+        ["value"]=>
+        string(28) "GTK_BASELINE_POSITION_BOTTOM"
+      }
+    }
+  }
+  ["DeleteType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkDeleteType"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_DELETE_TYPE"
+    ["values"]=>
+    array(8) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "chars"
+        ["value"]=>
+        string(16) "GTK_DELETE_CHARS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "word-ends"
+        ["value"]=>
+        string(20) "GTK_DELETE_WORD_ENDS"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "words"
+        ["value"]=>
+        string(16) "GTK_DELETE_WORDS"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(13) "display-lines"
+        ["value"]=>
+        string(24) "GTK_DELETE_DISPLAY_LINES"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(17) "display-line-ends"
+        ["value"]=>
+        string(28) "GTK_DELETE_DISPLAY_LINE_ENDS"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(14) "paragraph-ends"
+        ["value"]=>
+        string(25) "GTK_DELETE_PARAGRAPH_ENDS"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(10) "paragraphs"
+        ["value"]=>
+        string(21) "GTK_DELETE_PARAGRAPHS"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(10) "whitespace"
+        ["value"]=>
+        string(21) "GTK_DELETE_WHITESPACE"
+      }
+    }
+  }
+  ["DirectionType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkDirectionType"
+    ["gtype-id"]=>
+    string(23) "GTK_TYPE_DIRECTION_TYPE"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(11) "tab-forward"
+        ["value"]=>
+        string(19) "GTK_DIR_TAB_FORWARD"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(12) "tab-backward"
+        ["value"]=>
+        string(20) "GTK_DIR_TAB_BACKWARD"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(2) "up"
+        ["value"]=>
+        string(10) "GTK_DIR_UP"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "down"
+        ["value"]=>
+        string(12) "GTK_DIR_DOWN"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(4) "left"
+        ["value"]=>
+        string(12) "GTK_DIR_LEFT"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(5) "right"
+        ["value"]=>
+        string(13) "GTK_DIR_RIGHT"
+      }
+    }
+  }
+  ["IconSize"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(11) "GtkIconSize"
+    ["gtype-id"]=>
+    string(18) "GTK_TYPE_ICON_SIZE"
+    ["values"]=>
+    array(7) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "invalid"
+        ["value"]=>
+        string(21) "GTK_ICON_SIZE_INVALID"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "menu"
+        ["value"]=>
+        string(18) "GTK_ICON_SIZE_MENU"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(13) "small-toolbar"
+        ["value"]=>
+        string(27) "GTK_ICON_SIZE_SMALL_TOOLBAR"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(13) "large-toolbar"
+        ["value"]=>
+        string(27) "GTK_ICON_SIZE_LARGE_TOOLBAR"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(6) "button"
+        ["value"]=>
+        string(20) "GTK_ICON_SIZE_BUTTON"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(3) "dnd"
+        ["value"]=>
+        string(17) "GTK_ICON_SIZE_DND"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(6) "dialog"
+        ["value"]=>
+        string(20) "GTK_ICON_SIZE_DIALOG"
+      }
+    }
+  }
+  ["SensitivityType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(18) "GtkSensitivityType"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_SENSITIVITY_TYPE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "auto"
+        ["value"]=>
+        string(20) "GTK_SENSITIVITY_AUTO"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(2) "on"
+        ["value"]=>
+        string(18) "GTK_SENSITIVITY_ON"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "off"
+        ["value"]=>
+        string(19) "GTK_SENSITIVITY_OFF"
+      }
+    }
+  }
+  ["TextDirection"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkTextDirection"
+    ["gtype-id"]=>
+    string(23) "GTK_TYPE_TEXT_DIRECTION"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(17) "GTK_TEXT_DIR_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(3) "ltr"
+        ["value"]=>
+        string(16) "GTK_TEXT_DIR_LTR"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "rtl"
+        ["value"]=>
+        string(16) "GTK_TEXT_DIR_RTL"
+      }
+    }
+  }
+  ["Justification"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkJustification"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_JUSTIFICATION"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "left"
+        ["value"]=>
+        string(16) "GTK_JUSTIFY_LEFT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "right"
+        ["value"]=>
+        string(17) "GTK_JUSTIFY_RIGHT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "center"
+        ["value"]=>
+        string(18) "GTK_JUSTIFY_CENTER"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "fill"
+        ["value"]=>
+        string(16) "GTK_JUSTIFY_FILL"
+      }
+    }
+  }
+  ["MenuDirectionType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(20) "GtkMenuDirectionType"
+    ["gtype-id"]=>
+    string(28) "GTK_TYPE_MENU_DIRECTION_TYPE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "parent"
+        ["value"]=>
+        string(19) "GTK_MENU_DIR_PARENT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "child"
+        ["value"]=>
+        string(18) "GTK_MENU_DIR_CHILD"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "next"
+        ["value"]=>
+        string(17) "GTK_MENU_DIR_NEXT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "prev"
+        ["value"]=>
+        string(17) "GTK_MENU_DIR_PREV"
+      }
+    }
+  }
+  ["MessageType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkMessageType"
+    ["gtype-id"]=>
+    string(21) "GTK_TYPE_MESSAGE_TYPE"
+    ["values"]=>
+    array(5) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "info"
+        ["value"]=>
+        string(16) "GTK_MESSAGE_INFO"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "warning"
+        ["value"]=>
+        string(19) "GTK_MESSAGE_WARNING"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "question"
+        ["value"]=>
+        string(20) "GTK_MESSAGE_QUESTION"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(5) "error"
+        ["value"]=>
+        string(17) "GTK_MESSAGE_ERROR"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(5) "other"
+        ["value"]=>
+        string(17) "GTK_MESSAGE_OTHER"
+      }
+    }
+  }
+  ["MovementStep"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkMovementStep"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_MOVEMENT_STEP"
+    ["values"]=>
+    array(10) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(17) "logical-positions"
+        ["value"]=>
+        string(30) "GTK_MOVEMENT_LOGICAL_POSITIONS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(16) "visual-positions"
+        ["value"]=>
+        string(29) "GTK_MOVEMENT_VISUAL_POSITIONS"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "words"
+        ["value"]=>
+        string(18) "GTK_MOVEMENT_WORDS"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(13) "display-lines"
+        ["value"]=>
+        string(26) "GTK_MOVEMENT_DISPLAY_LINES"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(17) "display-line-ends"
+        ["value"]=>
+        string(30) "GTK_MOVEMENT_DISPLAY_LINE_ENDS"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(10) "paragraphs"
+        ["value"]=>
+        string(23) "GTK_MOVEMENT_PARAGRAPHS"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(14) "paragraph-ends"
+        ["value"]=>
+        string(27) "GTK_MOVEMENT_PARAGRAPH_ENDS"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(5) "pages"
+        ["value"]=>
+        string(18) "GTK_MOVEMENT_PAGES"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(11) "buffer-ends"
+        ["value"]=>
+        string(24) "GTK_MOVEMENT_BUFFER_ENDS"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(16) "horizontal-pages"
+        ["value"]=>
+        string(29) "GTK_MOVEMENT_HORIZONTAL_PAGES"
+      }
+    }
+  }
+  ["ScrollStep"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkScrollStep"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_SCROLL_STEP"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "steps"
+        ["value"]=>
+        string(16) "GTK_SCROLL_STEPS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "pages"
+        ["value"]=>
+        string(16) "GTK_SCROLL_PAGES"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "ends"
+        ["value"]=>
+        string(15) "GTK_SCROLL_ENDS"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(16) "horizontal-steps"
+        ["value"]=>
+        string(27) "GTK_SCROLL_HORIZONTAL_STEPS"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(16) "horizontal-pages"
+        ["value"]=>
+        string(27) "GTK_SCROLL_HORIZONTAL_PAGES"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(15) "horizontal-ends"
+        ["value"]=>
+        string(26) "GTK_SCROLL_HORIZONTAL_ENDS"
+      }
+    }
+  }
+  ["Orientation"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkOrientation"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_ORIENTATION"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(10) "horizontal"
+        ["value"]=>
+        string(26) "GTK_ORIENTATION_HORIZONTAL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(8) "vertical"
+        ["value"]=>
+        string(24) "GTK_ORIENTATION_VERTICAL"
+      }
+    }
+  }
+  ["PackType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(11) "GtkPackType"
+    ["gtype-id"]=>
+    string(18) "GTK_TYPE_PACK_TYPE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "start"
+        ["value"]=>
+        string(14) "GTK_PACK_START"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(3) "end"
+        ["value"]=>
+        string(12) "GTK_PACK_END"
+      }
+    }
+  }
+  ["PositionType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkPositionType"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_POSITION_TYPE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "left"
+        ["value"]=>
+        string(12) "GTK_POS_LEFT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "right"
+        ["value"]=>
+        string(13) "GTK_POS_RIGHT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "top"
+        ["value"]=>
+        string(11) "GTK_POS_TOP"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "bottom"
+        ["value"]=>
+        string(14) "GTK_POS_BOTTOM"
+      }
+    }
+  }
+  ["ReliefStyle"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkReliefStyle"
+    ["gtype-id"]=>
+    string(21) "GTK_TYPE_RELIEF_STYLE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "normal"
+        ["value"]=>
+        string(17) "GTK_RELIEF_NORMAL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "half"
+        ["value"]=>
+        string(15) "GTK_RELIEF_HALF"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(15) "GTK_RELIEF_NONE"
+      }
+    }
+  }
+  ["ScrollType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkScrollType"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_SCROLL_TYPE"
+    ["values"]=>
+    array(16) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(15) "GTK_SCROLL_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "jump"
+        ["value"]=>
+        string(15) "GTK_SCROLL_JUMP"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(13) "step-backward"
+        ["value"]=>
+        string(24) "GTK_SCROLL_STEP_BACKWARD"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(12) "step-forward"
+        ["value"]=>
+        string(23) "GTK_SCROLL_STEP_FORWARD"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(13) "page-backward"
+        ["value"]=>
+        string(24) "GTK_SCROLL_PAGE_BACKWARD"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(12) "page-forward"
+        ["value"]=>
+        string(23) "GTK_SCROLL_PAGE_FORWARD"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(7) "step-up"
+        ["value"]=>
+        string(18) "GTK_SCROLL_STEP_UP"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(9) "step-down"
+        ["value"]=>
+        string(20) "GTK_SCROLL_STEP_DOWN"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(7) "page-up"
+        ["value"]=>
+        string(18) "GTK_SCROLL_PAGE_UP"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(9) "page-down"
+        ["value"]=>
+        string(20) "GTK_SCROLL_PAGE_DOWN"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(9) "step-left"
+        ["value"]=>
+        string(20) "GTK_SCROLL_STEP_LEFT"
+      }
+      [11]=>
+      array(2) {
+        ["name"]=>
+        string(10) "step-right"
+        ["value"]=>
+        string(21) "GTK_SCROLL_STEP_RIGHT"
+      }
+      [12]=>
+      array(2) {
+        ["name"]=>
+        string(9) "page-left"
+        ["value"]=>
+        string(20) "GTK_SCROLL_PAGE_LEFT"
+      }
+      [13]=>
+      array(2) {
+        ["name"]=>
+        string(10) "page-right"
+        ["value"]=>
+        string(21) "GTK_SCROLL_PAGE_RIGHT"
+      }
+      [14]=>
+      array(2) {
+        ["name"]=>
+        string(5) "start"
+        ["value"]=>
+        string(16) "GTK_SCROLL_START"
+      }
+      [15]=>
+      array(2) {
+        ["name"]=>
+        string(3) "end"
+        ["value"]=>
+        string(14) "GTK_SCROLL_END"
+      }
+    }
+  }
+  ["SelectionMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkSelectionMode"
+    ["gtype-id"]=>
+    string(23) "GTK_TYPE_SELECTION_MODE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(18) "GTK_SELECTION_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "single"
+        ["value"]=>
+        string(20) "GTK_SELECTION_SINGLE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "browse"
+        ["value"]=>
+        string(20) "GTK_SELECTION_BROWSE"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(8) "multiple"
+        ["value"]=>
+        string(22) "GTK_SELECTION_MULTIPLE"
+      }
+    }
+  }
+  ["ShadowType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkShadowType"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_SHADOW_TYPE"
+    ["values"]=>
+    array(5) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(15) "GTK_SHADOW_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(2) "in"
+        ["value"]=>
+        string(13) "GTK_SHADOW_IN"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "out"
+        ["value"]=>
+        string(14) "GTK_SHADOW_OUT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(9) "etched-in"
+        ["value"]=>
+        string(20) "GTK_SHADOW_ETCHED_IN"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(10) "etched-out"
+        ["value"]=>
+        string(21) "GTK_SHADOW_ETCHED_OUT"
+      }
+    }
+  }
+  ["StateType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(12) "GtkStateType"
+    ["gtype-id"]=>
+    string(19) "GTK_TYPE_STATE_TYPE"
+    ["values"]=>
+    array(7) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "normal"
+        ["value"]=>
+        string(16) "GTK_STATE_NORMAL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "active"
+        ["value"]=>
+        string(16) "GTK_STATE_ACTIVE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "prelight"
+        ["value"]=>
+        string(18) "GTK_STATE_PRELIGHT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(8) "selected"
+        ["value"]=>
+        string(18) "GTK_STATE_SELECTED"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(11) "insensitive"
+        ["value"]=>
+        string(21) "GTK_STATE_INSENSITIVE"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(12) "inconsistent"
+        ["value"]=>
+        string(22) "GTK_STATE_INCONSISTENT"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(7) "focused"
+        ["value"]=>
+        string(17) "GTK_STATE_FOCUSED"
+      }
+    }
+  }
+  ["ToolbarStyle"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkToolbarStyle"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_TOOLBAR_STYLE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "icons"
+        ["value"]=>
+        string(17) "GTK_TOOLBAR_ICONS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "text"
+        ["value"]=>
+        string(16) "GTK_TOOLBAR_TEXT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "both"
+        ["value"]=>
+        string(16) "GTK_TOOLBAR_BOTH"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(10) "both-horiz"
+        ["value"]=>
+        string(22) "GTK_TOOLBAR_BOTH_HORIZ"
+      }
+    }
+  }
+  ["WrapMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(11) "GtkWrapMode"
+    ["gtype-id"]=>
+    string(18) "GTK_TYPE_WRAP_MODE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(13) "GTK_WRAP_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "char"
+        ["value"]=>
+        string(13) "GTK_WRAP_CHAR"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "word"
+        ["value"]=>
+        string(13) "GTK_WRAP_WORD"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(9) "word-char"
+        ["value"]=>
+        string(18) "GTK_WRAP_WORD_CHAR"
+      }
+    }
+  }
+  ["SortType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(11) "GtkSortType"
+    ["gtype-id"]=>
+    string(18) "GTK_TYPE_SORT_TYPE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "ascending"
+        ["value"]=>
+        string(18) "GTK_SORT_ASCENDING"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(10) "descending"
+        ["value"]=>
+        string(19) "GTK_SORT_DESCENDING"
+      }
+    }
+  }
+  ["IMPreeditStyle"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkIMPreeditStyle"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_IM_PREEDIT_STYLE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "nothing"
+        ["value"]=>
+        string(22) "GTK_IM_PREEDIT_NOTHING"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(8) "callback"
+        ["value"]=>
+        string(23) "GTK_IM_PREEDIT_CALLBACK"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(19) "GTK_IM_PREEDIT_NONE"
+      }
+    }
+  }
+  ["IMStatusStyle"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkIMStatusStyle"
+    ["gtype-id"]=>
+    string(24) "GTK_TYPE_IM_STATUS_STYLE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "nothing"
+        ["value"]=>
+        string(21) "GTK_IM_STATUS_NOTHING"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(8) "callback"
+        ["value"]=>
+        string(22) "GTK_IM_STATUS_CALLBACK"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(18) "GTK_IM_STATUS_NONE"
+      }
+    }
+  }
+  ["PackDirection"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkPackDirection"
+    ["gtype-id"]=>
+    string(23) "GTK_TYPE_PACK_DIRECTION"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(3) "ltr"
+        ["value"]=>
+        string(22) "GTK_PACK_DIRECTION_LTR"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(3) "rtl"
+        ["value"]=>
+        string(22) "GTK_PACK_DIRECTION_RTL"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "ttb"
+        ["value"]=>
+        string(22) "GTK_PACK_DIRECTION_TTB"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(3) "btt"
+        ["value"]=>
+        string(22) "GTK_PACK_DIRECTION_BTT"
+      }
+    }
+  }
+  ["PrintPages"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkPrintPages"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_PRINT_PAGES"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(3) "all"
+        ["value"]=>
+        string(19) "GTK_PRINT_PAGES_ALL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "current"
+        ["value"]=>
+        string(23) "GTK_PRINT_PAGES_CURRENT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "ranges"
+        ["value"]=>
+        string(22) "GTK_PRINT_PAGES_RANGES"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(9) "selection"
+        ["value"]=>
+        string(25) "GTK_PRINT_PAGES_SELECTION"
+      }
+    }
+  }
+  ["PageSet"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(10) "GtkPageSet"
+    ["gtype-id"]=>
+    string(17) "GTK_TYPE_PAGE_SET"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(3) "all"
+        ["value"]=>
+        string(16) "GTK_PAGE_SET_ALL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "even"
+        ["value"]=>
+        string(17) "GTK_PAGE_SET_EVEN"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "odd"
+        ["value"]=>
+        string(16) "GTK_PAGE_SET_ODD"
+      }
+    }
+  }
+  ["NumberUpLayout"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkNumberUpLayout"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_NUMBER_UP_LAYOUT"
+    ["values"]=>
+    array(8) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(27) "left-to-right-top-to-bottom"
+        ["value"]=>
+        string(48) "GTK_NUMBER_UP_LAYOUT_LEFT_TO_RIGHT_TOP_TO_BOTTOM"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(27) "left-to-right-bottom-to-top"
+        ["value"]=>
+        string(48) "GTK_NUMBER_UP_LAYOUT_LEFT_TO_RIGHT_BOTTOM_TO_TOP"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(27) "right-to-left-top-to-bottom"
+        ["value"]=>
+        string(48) "GTK_NUMBER_UP_LAYOUT_RIGHT_TO_LEFT_TOP_TO_BOTTOM"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(27) "right-to-left-bottom-to-top"
+        ["value"]=>
+        string(48) "GTK_NUMBER_UP_LAYOUT_RIGHT_TO_LEFT_BOTTOM_TO_TOP"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(27) "top-to-bottom-left-to-right"
+        ["value"]=>
+        string(48) "GTK_NUMBER_UP_LAYOUT_TOP_TO_BOTTOM_LEFT_TO_RIGHT"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(27) "top-to-bottom-right-to-left"
+        ["value"]=>
+        string(48) "GTK_NUMBER_UP_LAYOUT_TOP_TO_BOTTOM_RIGHT_TO_LEFT"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(27) "bottom-to-top-left-to-right"
+        ["value"]=>
+        string(48) "GTK_NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_LEFT_TO_RIGHT"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(27) "bottom-to-top-right-to-left"
+        ["value"]=>
+        string(48) "GTK_NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_RIGHT_TO_LEFT"
+      }
+    }
+  }
+  ["PageOrientation"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(18) "GtkPageOrientation"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_PAGE_ORIENTATION"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(8) "portrait"
+        ["value"]=>
+        string(29) "GTK_PAGE_ORIENTATION_PORTRAIT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "landscape"
+        ["value"]=>
+        string(30) "GTK_PAGE_ORIENTATION_LANDSCAPE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(16) "reverse-portrait"
+        ["value"]=>
+        string(37) "GTK_PAGE_ORIENTATION_REVERSE_PORTRAIT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(17) "reverse-landscape"
+        ["value"]=>
+        string(38) "GTK_PAGE_ORIENTATION_REVERSE_LANDSCAPE"
+      }
+    }
+  }
+  ["PrintQuality"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkPrintQuality"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_PRINT_QUALITY"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(3) "low"
+        ["value"]=>
+        string(21) "GTK_PRINT_QUALITY_LOW"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "normal"
+        ["value"]=>
+        string(24) "GTK_PRINT_QUALITY_NORMAL"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "high"
+        ["value"]=>
+        string(22) "GTK_PRINT_QUALITY_HIGH"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(5) "draft"
+        ["value"]=>
+        string(23) "GTK_PRINT_QUALITY_DRAFT"
+      }
+    }
+  }
+  ["PrintDuplex"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkPrintDuplex"
+    ["gtype-id"]=>
+    string(21) "GTK_TYPE_PRINT_DUPLEX"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "simplex"
+        ["value"]=>
+        string(24) "GTK_PRINT_DUPLEX_SIMPLEX"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(10) "horizontal"
+        ["value"]=>
+        string(27) "GTK_PRINT_DUPLEX_HORIZONTAL"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "vertical"
+        ["value"]=>
+        string(25) "GTK_PRINT_DUPLEX_VERTICAL"
+      }
+    }
+  }
+  ["Unit"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(7) "GtkUnit"
+    ["gtype-id"]=>
+    string(13) "GTK_TYPE_UNIT"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(13) "GTK_UNIT_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "points"
+        ["value"]=>
+        string(15) "GTK_UNIT_POINTS"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "inch"
+        ["value"]=>
+        string(13) "GTK_UNIT_INCH"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(2) "mm"
+        ["value"]=>
+        string(11) "GTK_UNIT_MM"
+      }
+    }
+  }
+  ["TreeViewGridLines"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(20) "GtkTreeViewGridLines"
+    ["gtype-id"]=>
+    string(29) "GTK_TYPE_TREE_VIEW_GRID_LINES"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(29) "GTK_TREE_VIEW_GRID_LINES_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(10) "horizontal"
+        ["value"]=>
+        string(35) "GTK_TREE_VIEW_GRID_LINES_HORIZONTAL"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "vertical"
+        ["value"]=>
+        string(33) "GTK_TREE_VIEW_GRID_LINES_VERTICAL"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "both"
+        ["value"]=>
+        string(29) "GTK_TREE_VIEW_GRID_LINES_BOTH"
+      }
+    }
+  }
+  ["DragResult"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkDragResult"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_DRAG_RESULT"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "success"
+        ["value"]=>
+        string(23) "GTK_DRAG_RESULT_SUCCESS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "no-target"
+        ["value"]=>
+        string(25) "GTK_DRAG_RESULT_NO_TARGET"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(14) "user-cancelled"
+        ["value"]=>
+        string(30) "GTK_DRAG_RESULT_USER_CANCELLED"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(15) "timeout-expired"
+        ["value"]=>
+        string(31) "GTK_DRAG_RESULT_TIMEOUT_EXPIRED"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(11) "grab-broken"
+        ["value"]=>
+        string(27) "GTK_DRAG_RESULT_GRAB_BROKEN"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(5) "error"
+        ["value"]=>
+        string(21) "GTK_DRAG_RESULT_ERROR"
+      }
+    }
+  }
+  ["SizeGroupMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkSizeGroupMode"
+    ["gtype-id"]=>
+    string(24) "GTK_TYPE_SIZE_GROUP_MODE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(19) "GTK_SIZE_GROUP_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(10) "horizontal"
+        ["value"]=>
+        string(25) "GTK_SIZE_GROUP_HORIZONTAL"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(8) "vertical"
+        ["value"]=>
+        string(23) "GTK_SIZE_GROUP_VERTICAL"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "both"
+        ["value"]=>
+        string(19) "GTK_SIZE_GROUP_BOTH"
+      }
+    }
+  }
+  ["SizeRequestMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(18) "GtkSizeRequestMode"
+    ["gtype-id"]=>
+    string(26) "GTK_TYPE_SIZE_REQUEST_MODE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(16) "height-for-width"
+        ["value"]=>
+        string(33) "GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(16) "width-for-height"
+        ["value"]=>
+        string(33) "GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(13) "constant-size"
+        ["value"]=>
+        string(30) "GTK_SIZE_REQUEST_CONSTANT_SIZE"
+      }
+    }
+  }
+  ["ScrollablePolicy"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(19) "GtkScrollablePolicy"
+    ["gtype-id"]=>
+    string(26) "GTK_TYPE_SCROLLABLE_POLICY"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "minimum"
+        ["value"]=>
+        string(18) "GTK_SCROLL_MINIMUM"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "natural"
+        ["value"]=>
+        string(18) "GTK_SCROLL_NATURAL"
+      }
+    }
+  }
+  ["BorderStyle"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkBorderStyle"
+    ["gtype-id"]=>
+    string(21) "GTK_TYPE_BORDER_STYLE"
+    ["values"]=>
+    array(10) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(21) "GTK_BORDER_STYLE_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "solid"
+        ["value"]=>
+        string(22) "GTK_BORDER_STYLE_SOLID"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "inset"
+        ["value"]=>
+        string(22) "GTK_BORDER_STYLE_INSET"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "outset"
+        ["value"]=>
+        string(23) "GTK_BORDER_STYLE_OUTSET"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(6) "hidden"
+        ["value"]=>
+        string(23) "GTK_BORDER_STYLE_HIDDEN"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(6) "dotted"
+        ["value"]=>
+        string(23) "GTK_BORDER_STYLE_DOTTED"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(6) "dashed"
+        ["value"]=>
+        string(23) "GTK_BORDER_STYLE_DASHED"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(6) "double"
+        ["value"]=>
+        string(23) "GTK_BORDER_STYLE_DOUBLE"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(6) "groove"
+        ["value"]=>
+        string(23) "GTK_BORDER_STYLE_GROOVE"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(5) "ridge"
+        ["value"]=>
+        string(22) "GTK_BORDER_STYLE_RIDGE"
+      }
+    }
+  }
+  ["LevelBarMode"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkLevelBarMode"
+    ["gtype-id"]=>
+    string(23) "GTK_TYPE_LEVEL_BAR_MODE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(10) "continuous"
+        ["value"]=>
+        string(29) "GTK_LEVEL_BAR_MODE_CONTINUOUS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(8) "discrete"
+        ["value"]=>
+        string(27) "GTK_LEVEL_BAR_MODE_DISCRETE"
+      }
+    }
+  }
+  ["InputPurpose"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkInputPurpose"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_INPUT_PURPOSE"
+    ["values"]=>
+    array(11) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "free-form"
+        ["value"]=>
+        string(27) "GTK_INPUT_PURPOSE_FREE_FORM"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "alpha"
+        ["value"]=>
+        string(23) "GTK_INPUT_PURPOSE_ALPHA"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "digits"
+        ["value"]=>
+        string(24) "GTK_INPUT_PURPOSE_DIGITS"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "number"
+        ["value"]=>
+        string(24) "GTK_INPUT_PURPOSE_NUMBER"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(5) "phone"
+        ["value"]=>
+        string(23) "GTK_INPUT_PURPOSE_PHONE"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(3) "url"
+        ["value"]=>
+        string(21) "GTK_INPUT_PURPOSE_URL"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(5) "email"
+        ["value"]=>
+        string(23) "GTK_INPUT_PURPOSE_EMAIL"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(4) "name"
+        ["value"]=>
+        string(22) "GTK_INPUT_PURPOSE_NAME"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(8) "password"
+        ["value"]=>
+        string(26) "GTK_INPUT_PURPOSE_PASSWORD"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(3) "pin"
+        ["value"]=>
+        string(21) "GTK_INPUT_PURPOSE_PIN"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(8) "terminal"
+        ["value"]=>
+        string(26) "GTK_INPUT_PURPOSE_TERMINAL"
+      }
+    }
+  }
+  ["PropagationPhase"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(19) "GtkPropagationPhase"
+    ["gtype-id"]=>
+    string(26) "GTK_TYPE_PROPAGATION_PHASE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(14) "GTK_PHASE_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "capture"
+        ["value"]=>
+        string(17) "GTK_PHASE_CAPTURE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "bubble"
+        ["value"]=>
+        string(16) "GTK_PHASE_BUBBLE"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "target"
+        ["value"]=>
+        string(16) "GTK_PHASE_TARGET"
+      }
+    }
+  }
+  ["EventSequenceState"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(21) "GtkEventSequenceState"
+    ["gtype-id"]=>
+    string(29) "GTK_TYPE_EVENT_SEQUENCE_STATE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(23) "GTK_EVENT_SEQUENCE_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "claimed"
+        ["value"]=>
+        string(26) "GTK_EVENT_SEQUENCE_CLAIMED"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "denied"
+        ["value"]=>
+        string(25) "GTK_EVENT_SEQUENCE_DENIED"
+      }
+    }
+  }
+  ["PanDirection"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkPanDirection"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_PAN_DIRECTION"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "left"
+        ["value"]=>
+        string(22) "GTK_PAN_DIRECTION_LEFT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "right"
+        ["value"]=>
+        string(23) "GTK_PAN_DIRECTION_RIGHT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(2) "up"
+        ["value"]=>
+        string(20) "GTK_PAN_DIRECTION_UP"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "down"
+        ["value"]=>
+        string(22) "GTK_PAN_DIRECTION_DOWN"
+      }
+    }
+  }
+  ["PopoverConstraint"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(20) "GtkPopoverConstraint"
+    ["gtype-id"]=>
+    string(27) "GTK_TYPE_POPOVER_CONSTRAINT"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(27) "GTK_POPOVER_CONSTRAINT_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "window"
+        ["value"]=>
+        string(29) "GTK_POPOVER_CONSTRAINT_WINDOW"
+      }
+    }
+  }
+  ["FileChooserAction"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(20) "GtkFileChooserAction"
+    ["gtype-id"]=>
+    string(28) "GTK_TYPE_FILE_CHOOSER_ACTION"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "open"
+        ["value"]=>
+        string(28) "GTK_FILE_CHOOSER_ACTION_OPEN"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "save"
+        ["value"]=>
+        string(28) "GTK_FILE_CHOOSER_ACTION_SAVE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(13) "select-folder"
+        ["value"]=>
+        string(37) "GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(13) "create-folder"
+        ["value"]=>
+        string(37) "GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER"
+      }
+    }
+  }
+  ["FileChooserConfirmation"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(26) "GtkFileChooserConfirmation"
+    ["gtype-id"]=>
+    string(34) "GTK_TYPE_FILE_CHOOSER_CONFIRMATION"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "confirm"
+        ["value"]=>
+        string(37) "GTK_FILE_CHOOSER_CONFIRMATION_CONFIRM"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(15) "accept-filename"
+        ["value"]=>
+        string(45) "GTK_FILE_CHOOSER_CONFIRMATION_ACCEPT_FILENAME"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(12) "select-again"
+        ["value"]=>
+        string(42) "GTK_FILE_CHOOSER_CONFIRMATION_SELECT_AGAIN"
+      }
+    }
+  }
+  ["FileChooserError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(19) "GtkFileChooserError"
+    ["gtype-id"]=>
+    string(27) "GTK_TYPE_FILE_CHOOSER_ERROR"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(11) "nonexistent"
+        ["value"]=>
+        string(34) "GTK_FILE_CHOOSER_ERROR_NONEXISTENT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(12) "bad-filename"
+        ["value"]=>
+        string(35) "GTK_FILE_CHOOSER_ERROR_BAD_FILENAME"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(14) "already-exists"
+        ["value"]=>
+        string(37) "GTK_FILE_CHOOSER_ERROR_ALREADY_EXISTS"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(19) "incomplete-hostname"
+        ["value"]=>
+        string(42) "GTK_FILE_CHOOSER_ERROR_INCOMPLETE_HOSTNAME"
+      }
+    }
+  }
+  ["IconThemeError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkIconThemeError"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_ICON_THEME_ERROR"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "not-found"
+        ["value"]=>
+        string(24) "GTK_ICON_THEME_NOT_FOUND"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "failed"
+        ["value"]=>
+        string(21) "GTK_ICON_THEME_FAILED"
+      }
+    }
+  }
+  ["IconViewDropPosition"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(23) "GtkIconViewDropPosition"
+    ["gtype-id"]=>
+    string(32) "GTK_TYPE_ICON_VIEW_DROP_POSITION"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "no-drop"
+        ["value"]=>
+        string(21) "GTK_ICON_VIEW_NO_DROP"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "drop-into"
+        ["value"]=>
+        string(23) "GTK_ICON_VIEW_DROP_INTO"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(9) "drop-left"
+        ["value"]=>
+        string(23) "GTK_ICON_VIEW_DROP_LEFT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(10) "drop-right"
+        ["value"]=>
+        string(24) "GTK_ICON_VIEW_DROP_RIGHT"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(10) "drop-above"
+        ["value"]=>
+        string(24) "GTK_ICON_VIEW_DROP_ABOVE"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(10) "drop-below"
+        ["value"]=>
+        string(24) "GTK_ICON_VIEW_DROP_BELOW"
+      }
+    }
+  }
+  ["ImageType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(12) "GtkImageType"
+    ["gtype-id"]=>
+    string(19) "GTK_TYPE_IMAGE_TYPE"
+    ["values"]=>
+    array(8) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "empty"
+        ["value"]=>
+        string(15) "GTK_IMAGE_EMPTY"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "pixbuf"
+        ["value"]=>
+        string(16) "GTK_IMAGE_PIXBUF"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "stock"
+        ["value"]=>
+        string(15) "GTK_IMAGE_STOCK"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(8) "icon-set"
+        ["value"]=>
+        string(18) "GTK_IMAGE_ICON_SET"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(9) "animation"
+        ["value"]=>
+        string(19) "GTK_IMAGE_ANIMATION"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(9) "icon-name"
+        ["value"]=>
+        string(19) "GTK_IMAGE_ICON_NAME"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(5) "gicon"
+        ["value"]=>
+        string(15) "GTK_IMAGE_GICON"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(7) "surface"
+        ["value"]=>
+        string(17) "GTK_IMAGE_SURFACE"
+      }
+    }
+  }
+  ["ArrowPlacement"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkArrowPlacement"
+    ["gtype-id"]=>
+    string(24) "GTK_TYPE_ARROW_PLACEMENT"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "both"
+        ["value"]=>
+        string(15) "GTK_ARROWS_BOTH"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "start"
+        ["value"]=>
+        string(16) "GTK_ARROWS_START"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "end"
+        ["value"]=>
+        string(14) "GTK_ARROWS_END"
+      }
+    }
+  }
+  ["ButtonsType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkButtonsType"
+    ["gtype-id"]=>
+    string(21) "GTK_TYPE_BUTTONS_TYPE"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(16) "GTK_BUTTONS_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(2) "ok"
+        ["value"]=>
+        string(14) "GTK_BUTTONS_OK"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "close"
+        ["value"]=>
+        string(17) "GTK_BUTTONS_CLOSE"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "cancel"
+        ["value"]=>
+        string(18) "GTK_BUTTONS_CANCEL"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(6) "yes-no"
+        ["value"]=>
+        string(18) "GTK_BUTTONS_YES_NO"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(9) "ok-cancel"
+        ["value"]=>
+        string(21) "GTK_BUTTONS_OK_CANCEL"
+      }
+    }
+  }
+  ["ButtonRole"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkButtonRole"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_BUTTON_ROLE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "normal"
+        ["value"]=>
+        string(22) "GTK_BUTTON_ROLE_NORMAL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "check"
+        ["value"]=>
+        string(21) "GTK_BUTTON_ROLE_CHECK"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "radio"
+        ["value"]=>
+        string(21) "GTK_BUTTON_ROLE_RADIO"
+      }
+    }
+  }
+  ["NotebookTab"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkNotebookTab"
+    ["gtype-id"]=>
+    string(21) "GTK_TYPE_NOTEBOOK_TAB"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "first"
+        ["value"]=>
+        string(22) "GTK_NOTEBOOK_TAB_FIRST"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "last"
+        ["value"]=>
+        string(21) "GTK_NOTEBOOK_TAB_LAST"
+      }
+    }
+  }
+  ["PadActionType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkPadActionType"
+    ["gtype-id"]=>
+    string(24) "GTK_TYPE_PAD_ACTION_TYPE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "button"
+        ["value"]=>
+        string(21) "GTK_PAD_ACTION_BUTTON"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "ring"
+        ["value"]=>
+        string(19) "GTK_PAD_ACTION_RING"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "strip"
+        ["value"]=>
+        string(20) "GTK_PAD_ACTION_STRIP"
+      }
+    }
+  }
+  ["PrintStatus"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkPrintStatus"
+    ["gtype-id"]=>
+    string(21) "GTK_TYPE_PRINT_STATUS"
+    ["values"]=>
+    array(9) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "initial"
+        ["value"]=>
+        string(24) "GTK_PRINT_STATUS_INITIAL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "preparing"
+        ["value"]=>
+        string(26) "GTK_PRINT_STATUS_PREPARING"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(15) "generating-data"
+        ["value"]=>
+        string(32) "GTK_PRINT_STATUS_GENERATING_DATA"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(12) "sending-data"
+        ["value"]=>
+        string(29) "GTK_PRINT_STATUS_SENDING_DATA"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(7) "pending"
+        ["value"]=>
+        string(24) "GTK_PRINT_STATUS_PENDING"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(13) "pending-issue"
+        ["value"]=>
+        string(30) "GTK_PRINT_STATUS_PENDING_ISSUE"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(8) "printing"
+        ["value"]=>
+        string(25) "GTK_PRINT_STATUS_PRINTING"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(8) "finished"
+        ["value"]=>
+        string(25) "GTK_PRINT_STATUS_FINISHED"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(16) "finished-aborted"
+        ["value"]=>
+        string(33) "GTK_PRINT_STATUS_FINISHED_ABORTED"
+      }
+    }
+  }
+  ["PrintOperationResult"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(23) "GtkPrintOperationResult"
+    ["gtype-id"]=>
+    string(31) "GTK_TYPE_PRINT_OPERATION_RESULT"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "error"
+        ["value"]=>
+        string(32) "GTK_PRINT_OPERATION_RESULT_ERROR"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "apply"
+        ["value"]=>
+        string(32) "GTK_PRINT_OPERATION_RESULT_APPLY"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "cancel"
+        ["value"]=>
+        string(33) "GTK_PRINT_OPERATION_RESULT_CANCEL"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(11) "in-progress"
+        ["value"]=>
+        string(38) "GTK_PRINT_OPERATION_RESULT_IN_PROGRESS"
+      }
+    }
+  }
+  ["PrintOperationAction"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(23) "GtkPrintOperationAction"
+    ["gtype-id"]=>
+    string(31) "GTK_TYPE_PRINT_OPERATION_ACTION"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(12) "print-dialog"
+        ["value"]=>
+        string(39) "GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "print"
+        ["value"]=>
+        string(32) "GTK_PRINT_OPERATION_ACTION_PRINT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(7) "preview"
+        ["value"]=>
+        string(34) "GTK_PRINT_OPERATION_ACTION_PREVIEW"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "export"
+        ["value"]=>
+        string(33) "GTK_PRINT_OPERATION_ACTION_EXPORT"
+      }
+    }
+  }
+  ["PrintError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkPrintError"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_PRINT_ERROR"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "general"
+        ["value"]=>
+        string(23) "GTK_PRINT_ERROR_GENERAL"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(14) "internal-error"
+        ["value"]=>
+        string(30) "GTK_PRINT_ERROR_INTERNAL_ERROR"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "nomem"
+        ["value"]=>
+        string(21) "GTK_PRINT_ERROR_NOMEM"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(12) "invalid-file"
+        ["value"]=>
+        string(28) "GTK_PRINT_ERROR_INVALID_FILE"
+      }
+    }
+  }
+  ["RecentSortType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkRecentSortType"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_RECENT_SORT_TYPE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(20) "GTK_RECENT_SORT_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(3) "mru"
+        ["value"]=>
+        string(19) "GTK_RECENT_SORT_MRU"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(3) "lru"
+        ["value"]=>
+        string(19) "GTK_RECENT_SORT_LRU"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "custom"
+        ["value"]=>
+        string(22) "GTK_RECENT_SORT_CUSTOM"
+      }
+    }
+  }
+  ["RecentChooserError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(21) "GtkRecentChooserError"
+    ["gtype-id"]=>
+    string(29) "GTK_TYPE_RECENT_CHOOSER_ERROR"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "not-found"
+        ["value"]=>
+        string(34) "GTK_RECENT_CHOOSER_ERROR_NOT_FOUND"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(11) "invalid-uri"
+        ["value"]=>
+        string(36) "GTK_RECENT_CHOOSER_ERROR_INVALID_URI"
+      }
+    }
+  }
+  ["RecentManagerError"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(21) "GtkRecentManagerError"
+    ["gtype-id"]=>
+    string(29) "GTK_TYPE_RECENT_MANAGER_ERROR"
+    ["values"]=>
+    array(7) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "not-found"
+        ["value"]=>
+        string(34) "GTK_RECENT_MANAGER_ERROR_NOT_FOUND"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(11) "invalid-uri"
+        ["value"]=>
+        string(36) "GTK_RECENT_MANAGER_ERROR_INVALID_URI"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(16) "invalid-encoding"
+        ["value"]=>
+        string(41) "GTK_RECENT_MANAGER_ERROR_INVALID_ENCODING"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(14) "not-registered"
+        ["value"]=>
+        string(39) "GTK_RECENT_MANAGER_ERROR_NOT_REGISTERED"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(4) "read"
+        ["value"]=>
+        string(29) "GTK_RECENT_MANAGER_ERROR_READ"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(5) "write"
+        ["value"]=>
+        string(30) "GTK_RECENT_MANAGER_ERROR_WRITE"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(7) "unknown"
+        ["value"]=>
+        string(32) "GTK_RECENT_MANAGER_ERROR_UNKNOWN"
+      }
+    }
+  }
+  ["RevealerTransitionType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(25) "GtkRevealerTransitionType"
+    ["gtype-id"]=>
+    string(33) "GTK_TYPE_REVEALER_TRANSITION_TYPE"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(33) "GTK_REVEALER_TRANSITION_TYPE_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "crossfade"
+        ["value"]=>
+        string(38) "GTK_REVEALER_TRANSITION_TYPE_CROSSFADE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(11) "slide-right"
+        ["value"]=>
+        string(40) "GTK_REVEALER_TRANSITION_TYPE_SLIDE_RIGHT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(10) "slide-left"
+        ["value"]=>
+        string(39) "GTK_REVEALER_TRANSITION_TYPE_SLIDE_LEFT"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(8) "slide-up"
+        ["value"]=>
+        string(37) "GTK_REVEALER_TRANSITION_TYPE_SLIDE_UP"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(10) "slide-down"
+        ["value"]=>
+        string(39) "GTK_REVEALER_TRANSITION_TYPE_SLIDE_DOWN"
+      }
+    }
+  }
+  ["CornerType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkCornerType"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_CORNER_TYPE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(8) "top-left"
+        ["value"]=>
+        string(19) "GTK_CORNER_TOP_LEFT"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(11) "bottom-left"
+        ["value"]=>
+        string(22) "GTK_CORNER_BOTTOM_LEFT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(9) "top-right"
+        ["value"]=>
+        string(20) "GTK_CORNER_TOP_RIGHT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(12) "bottom-right"
+        ["value"]=>
+        string(23) "GTK_CORNER_BOTTOM_RIGHT"
+      }
+    }
+  }
+  ["PolicyType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(13) "GtkPolicyType"
+    ["gtype-id"]=>
+    string(20) "GTK_TYPE_POLICY_TYPE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "always"
+        ["value"]=>
+        string(17) "GTK_POLICY_ALWAYS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "automatic"
+        ["value"]=>
+        string(20) "GTK_POLICY_AUTOMATIC"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "never"
+        ["value"]=>
+        string(16) "GTK_POLICY_NEVER"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(8) "external"
+        ["value"]=>
+        string(19) "GTK_POLICY_EXTERNAL"
+      }
+    }
+  }
+  ["ShortcutType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(15) "GtkShortcutType"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_SHORTCUT_TYPE"
+    ["values"]=>
+    array(8) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(11) "accelerator"
+        ["value"]=>
+        string(24) "GTK_SHORTCUT_ACCELERATOR"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(13) "gesture-pinch"
+        ["value"]=>
+        string(26) "GTK_SHORTCUT_GESTURE_PINCH"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(15) "gesture-stretch"
+        ["value"]=>
+        string(28) "GTK_SHORTCUT_GESTURE_STRETCH"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(24) "gesture-rotate-clockwise"
+        ["value"]=>
+        string(37) "GTK_SHORTCUT_GESTURE_ROTATE_CLOCKWISE"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(31) "gesture-rotate-counterclockwise"
+        ["value"]=>
+        string(44) "GTK_SHORTCUT_GESTURE_ROTATE_COUNTERCLOCKWISE"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(29) "gesture-two-finger-swipe-left"
+        ["value"]=>
+        string(42) "GTK_SHORTCUT_GESTURE_TWO_FINGER_SWIPE_LEFT"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(30) "gesture-two-finger-swipe-right"
+        ["value"]=>
+        string(43) "GTK_SHORTCUT_GESTURE_TWO_FINGER_SWIPE_RIGHT"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(7) "gesture"
+        ["value"]=>
+        string(20) "GTK_SHORTCUT_GESTURE"
+      }
+    }
+  }
+  ["SpinButtonUpdatePolicy"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(25) "GtkSpinButtonUpdatePolicy"
+    ["gtype-id"]=>
+    string(34) "GTK_TYPE_SPIN_BUTTON_UPDATE_POLICY"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "always"
+        ["value"]=>
+        string(17) "GTK_UPDATE_ALWAYS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(8) "if-valid"
+        ["value"]=>
+        string(19) "GTK_UPDATE_IF_VALID"
+      }
+    }
+  }
+  ["SpinType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(11) "GtkSpinType"
+    ["gtype-id"]=>
+    string(18) "GTK_TYPE_SPIN_TYPE"
+    ["values"]=>
+    array(7) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(12) "step-forward"
+        ["value"]=>
+        string(21) "GTK_SPIN_STEP_FORWARD"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(13) "step-backward"
+        ["value"]=>
+        string(22) "GTK_SPIN_STEP_BACKWARD"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(12) "page-forward"
+        ["value"]=>
+        string(21) "GTK_SPIN_PAGE_FORWARD"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(13) "page-backward"
+        ["value"]=>
+        string(22) "GTK_SPIN_PAGE_BACKWARD"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(4) "home"
+        ["value"]=>
+        string(13) "GTK_SPIN_HOME"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(3) "end"
+        ["value"]=>
+        string(12) "GTK_SPIN_END"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(12) "user-defined"
+        ["value"]=>
+        string(21) "GTK_SPIN_USER_DEFINED"
+      }
+    }
+  }
+  ["StackTransitionType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(22) "GtkStackTransitionType"
+    ["gtype-id"]=>
+    string(30) "GTK_TYPE_STACK_TRANSITION_TYPE"
+    ["values"]=>
+    array(20) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(30) "GTK_STACK_TRANSITION_TYPE_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "crossfade"
+        ["value"]=>
+        string(35) "GTK_STACK_TRANSITION_TYPE_CROSSFADE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(11) "slide-right"
+        ["value"]=>
+        string(37) "GTK_STACK_TRANSITION_TYPE_SLIDE_RIGHT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(10) "slide-left"
+        ["value"]=>
+        string(36) "GTK_STACK_TRANSITION_TYPE_SLIDE_LEFT"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(8) "slide-up"
+        ["value"]=>
+        string(34) "GTK_STACK_TRANSITION_TYPE_SLIDE_UP"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(10) "slide-down"
+        ["value"]=>
+        string(36) "GTK_STACK_TRANSITION_TYPE_SLIDE_DOWN"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(16) "slide-left-right"
+        ["value"]=>
+        string(42) "GTK_STACK_TRANSITION_TYPE_SLIDE_LEFT_RIGHT"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(13) "slide-up-down"
+        ["value"]=>
+        string(39) "GTK_STACK_TRANSITION_TYPE_SLIDE_UP_DOWN"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(7) "over-up"
+        ["value"]=>
+        string(33) "GTK_STACK_TRANSITION_TYPE_OVER_UP"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(9) "over-down"
+        ["value"]=>
+        string(35) "GTK_STACK_TRANSITION_TYPE_OVER_DOWN"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(9) "over-left"
+        ["value"]=>
+        string(35) "GTK_STACK_TRANSITION_TYPE_OVER_LEFT"
+      }
+      [11]=>
+      array(2) {
+        ["name"]=>
+        string(10) "over-right"
+        ["value"]=>
+        string(36) "GTK_STACK_TRANSITION_TYPE_OVER_RIGHT"
+      }
+      [12]=>
+      array(2) {
+        ["name"]=>
+        string(8) "under-up"
+        ["value"]=>
+        string(34) "GTK_STACK_TRANSITION_TYPE_UNDER_UP"
+      }
+      [13]=>
+      array(2) {
+        ["name"]=>
+        string(10) "under-down"
+        ["value"]=>
+        string(36) "GTK_STACK_TRANSITION_TYPE_UNDER_DOWN"
+      }
+      [14]=>
+      array(2) {
+        ["name"]=>
+        string(10) "under-left"
+        ["value"]=>
+        string(36) "GTK_STACK_TRANSITION_TYPE_UNDER_LEFT"
+      }
+      [15]=>
+      array(2) {
+        ["name"]=>
+        string(11) "under-right"
+        ["value"]=>
+        string(37) "GTK_STACK_TRANSITION_TYPE_UNDER_RIGHT"
+      }
+      [16]=>
+      array(2) {
+        ["name"]=>
+        string(12) "over-up-down"
+        ["value"]=>
+        string(38) "GTK_STACK_TRANSITION_TYPE_OVER_UP_DOWN"
+      }
+      [17]=>
+      array(2) {
+        ["name"]=>
+        string(12) "over-down-up"
+        ["value"]=>
+        string(38) "GTK_STACK_TRANSITION_TYPE_OVER_DOWN_UP"
+      }
+      [18]=>
+      array(2) {
+        ["name"]=>
+        string(15) "over-left-right"
+        ["value"]=>
+        string(41) "GTK_STACK_TRANSITION_TYPE_OVER_LEFT_RIGHT"
+      }
+      [19]=>
+      array(2) {
+        ["name"]=>
+        string(15) "over-right-left"
+        ["value"]=>
+        string(41) "GTK_STACK_TRANSITION_TYPE_OVER_RIGHT_LEFT"
+      }
+    }
+  }
+  ["TextBufferTargetInfo"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(23) "GtkTextBufferTargetInfo"
+    ["gtype-id"]=>
+    string(32) "GTK_TYPE_TEXT_BUFFER_TARGET_INFO"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(15) "buffer-contents"
+        ["value"]=>
+        string(43) "GTK_TEXT_BUFFER_TARGET_INFO_BUFFER_CONTENTS"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(9) "rich-text"
+        ["value"]=>
+        string(37) "GTK_TEXT_BUFFER_TARGET_INFO_RICH_TEXT"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "text"
+        ["value"]=>
+        string(32) "GTK_TEXT_BUFFER_TARGET_INFO_TEXT"
+      }
+    }
+  }
+  ["TextWindowType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkTextWindowType"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_TEXT_WINDOW_TYPE"
+    ["values"]=>
+    array(7) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "private"
+        ["value"]=>
+        string(23) "GTK_TEXT_WINDOW_PRIVATE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "widget"
+        ["value"]=>
+        string(22) "GTK_TEXT_WINDOW_WIDGET"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(4) "text"
+        ["value"]=>
+        string(20) "GTK_TEXT_WINDOW_TEXT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(4) "left"
+        ["value"]=>
+        string(20) "GTK_TEXT_WINDOW_LEFT"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(5) "right"
+        ["value"]=>
+        string(21) "GTK_TEXT_WINDOW_RIGHT"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(3) "top"
+        ["value"]=>
+        string(19) "GTK_TEXT_WINDOW_TOP"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(6) "bottom"
+        ["value"]=>
+        string(22) "GTK_TEXT_WINDOW_BOTTOM"
+      }
+    }
+  }
+  ["TextViewLayer"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkTextViewLayer"
+    ["gtype-id"]=>
+    string(24) "GTK_TYPE_TEXT_VIEW_LAYER"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "below"
+        ["value"]=>
+        string(25) "GTK_TEXT_VIEW_LAYER_BELOW"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "above"
+        ["value"]=>
+        string(25) "GTK_TEXT_VIEW_LAYER_ABOVE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(10) "below-text"
+        ["value"]=>
+        string(30) "GTK_TEXT_VIEW_LAYER_BELOW_TEXT"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(10) "above-text"
+        ["value"]=>
+        string(30) "GTK_TEXT_VIEW_LAYER_ABOVE_TEXT"
+      }
+    }
+  }
+  ["TextExtendSelection"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(22) "GtkTextExtendSelection"
+    ["gtype-id"]=>
+    string(30) "GTK_TYPE_TEXT_EXTEND_SELECTION"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "word"
+        ["value"]=>
+        string(30) "GTK_TEXT_EXTEND_SELECTION_WORD"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "line"
+        ["value"]=>
+        string(30) "GTK_TEXT_EXTEND_SELECTION_LINE"
+      }
+    }
+  }
+  ["ToolbarSpaceStyle"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(20) "GtkToolbarSpaceStyle"
+    ["gtype-id"]=>
+    string(28) "GTK_TYPE_TOOLBAR_SPACE_STYLE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(5) "empty"
+        ["value"]=>
+        string(23) "GTK_TOOLBAR_SPACE_EMPTY"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(4) "line"
+        ["value"]=>
+        string(22) "GTK_TOOLBAR_SPACE_LINE"
+      }
+    }
+  }
+  ["TreeViewColumnSizing"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(23) "GtkTreeViewColumnSizing"
+    ["gtype-id"]=>
+    string(32) "GTK_TYPE_TREE_VIEW_COLUMN_SIZING"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "grow-only"
+        ["value"]=>
+        string(30) "GTK_TREE_VIEW_COLUMN_GROW_ONLY"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(8) "autosize"
+        ["value"]=>
+        string(29) "GTK_TREE_VIEW_COLUMN_AUTOSIZE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "fixed"
+        ["value"]=>
+        string(26) "GTK_TREE_VIEW_COLUMN_FIXED"
+      }
+    }
+  }
+  ["TreeViewDropPosition"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(23) "GtkTreeViewDropPosition"
+    ["gtype-id"]=>
+    string(32) "GTK_TYPE_TREE_VIEW_DROP_POSITION"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "before"
+        ["value"]=>
+        string(25) "GTK_TREE_VIEW_DROP_BEFORE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(5) "after"
+        ["value"]=>
+        string(24) "GTK_TREE_VIEW_DROP_AFTER"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(14) "into-or-before"
+        ["value"]=>
+        string(33) "GTK_TREE_VIEW_DROP_INTO_OR_BEFORE"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(13) "into-or-after"
+        ["value"]=>
+        string(32) "GTK_TREE_VIEW_DROP_INTO_OR_AFTER"
+      }
+    }
+  }
+  ["WidgetHelpType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkWidgetHelpType"
+    ["gtype-id"]=>
+    string(25) "GTK_TYPE_WIDGET_HELP_TYPE"
+    ["values"]=>
+    array(2) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "tooltip"
+        ["value"]=>
+        string(23) "GTK_WIDGET_HELP_TOOLTIP"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(10) "whats-this"
+        ["value"]=>
+        string(26) "GTK_WIDGET_HELP_WHATS_THIS"
+      }
+    }
+  }
+  ["WindowPosition"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(17) "GtkWindowPosition"
+    ["gtype-id"]=>
+    string(24) "GTK_TYPE_WINDOW_POSITION"
+    ["values"]=>
+    array(5) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(4) "none"
+        ["value"]=>
+        string(16) "GTK_WIN_POS_NONE"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(6) "center"
+        ["value"]=>
+        string(18) "GTK_WIN_POS_CENTER"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "mouse"
+        ["value"]=>
+        string(17) "GTK_WIN_POS_MOUSE"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(13) "center-always"
+        ["value"]=>
+        string(25) "GTK_WIN_POS_CENTER_ALWAYS"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(16) "center-on-parent"
+        ["value"]=>
+        string(28) "GTK_WIN_POS_CENTER_ON_PARENT"
+      }
+    }
+  }
+  ["RcTokenType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(14) "GtkRcTokenType"
+    ["gtype-id"]=>
+    string(22) "GTK_TYPE_RC_TOKEN_TYPE"
+    ["values"]=>
+    array(40) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(7) "invalid"
+        ["value"]=>
+        string(20) "GTK_RC_TOKEN_INVALID"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(7) "include"
+        ["value"]=>
+        string(20) "GTK_RC_TOKEN_INCLUDE"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(6) "normal"
+        ["value"]=>
+        string(19) "GTK_RC_TOKEN_NORMAL"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(6) "active"
+        ["value"]=>
+        string(19) "GTK_RC_TOKEN_ACTIVE"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(8) "prelight"
+        ["value"]=>
+        string(21) "GTK_RC_TOKEN_PRELIGHT"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(8) "selected"
+        ["value"]=>
+        string(21) "GTK_RC_TOKEN_SELECTED"
+      }
+      [6]=>
+      array(2) {
+        ["name"]=>
+        string(11) "insensitive"
+        ["value"]=>
+        string(24) "GTK_RC_TOKEN_INSENSITIVE"
+      }
+      [7]=>
+      array(2) {
+        ["name"]=>
+        string(2) "fg"
+        ["value"]=>
+        string(15) "GTK_RC_TOKEN_FG"
+      }
+      [8]=>
+      array(2) {
+        ["name"]=>
+        string(2) "bg"
+        ["value"]=>
+        string(15) "GTK_RC_TOKEN_BG"
+      }
+      [9]=>
+      array(2) {
+        ["name"]=>
+        string(4) "text"
+        ["value"]=>
+        string(17) "GTK_RC_TOKEN_TEXT"
+      }
+      [10]=>
+      array(2) {
+        ["name"]=>
+        string(4) "base"
+        ["value"]=>
+        string(17) "GTK_RC_TOKEN_BASE"
+      }
+      [11]=>
+      array(2) {
+        ["name"]=>
+        string(10) "xthickness"
+        ["value"]=>
+        string(23) "GTK_RC_TOKEN_XTHICKNESS"
+      }
+      [12]=>
+      array(2) {
+        ["name"]=>
+        string(10) "ythickness"
+        ["value"]=>
+        string(23) "GTK_RC_TOKEN_YTHICKNESS"
+      }
+      [13]=>
+      array(2) {
+        ["name"]=>
+        string(4) "font"
+        ["value"]=>
+        string(17) "GTK_RC_TOKEN_FONT"
+      }
+      [14]=>
+      array(2) {
+        ["name"]=>
+        string(7) "fontset"
+        ["value"]=>
+        string(20) "GTK_RC_TOKEN_FONTSET"
+      }
+      [15]=>
+      array(2) {
+        ["name"]=>
+        string(9) "font-name"
+        ["value"]=>
+        string(22) "GTK_RC_TOKEN_FONT_NAME"
+      }
+      [16]=>
+      array(2) {
+        ["name"]=>
+        string(9) "bg-pixmap"
+        ["value"]=>
+        string(22) "GTK_RC_TOKEN_BG_PIXMAP"
+      }
+      [17]=>
+      array(2) {
+        ["name"]=>
+        string(11) "pixmap-path"
+        ["value"]=>
+        string(24) "GTK_RC_TOKEN_PIXMAP_PATH"
+      }
+      [18]=>
+      array(2) {
+        ["name"]=>
+        string(5) "style"
+        ["value"]=>
+        string(18) "GTK_RC_TOKEN_STYLE"
+      }
+      [19]=>
+      array(2) {
+        ["name"]=>
+        string(7) "binding"
+        ["value"]=>
+        string(20) "GTK_RC_TOKEN_BINDING"
+      }
+      [20]=>
+      array(2) {
+        ["name"]=>
+        string(4) "bind"
+        ["value"]=>
+        string(17) "GTK_RC_TOKEN_BIND"
+      }
+      [21]=>
+      array(2) {
+        ["name"]=>
+        string(6) "widget"
+        ["value"]=>
+        string(19) "GTK_RC_TOKEN_WIDGET"
+      }
+      [22]=>
+      array(2) {
+        ["name"]=>
+        string(12) "widget-class"
+        ["value"]=>
+        string(25) "GTK_RC_TOKEN_WIDGET_CLASS"
+      }
+      [23]=>
+      array(2) {
+        ["name"]=>
+        string(5) "class"
+        ["value"]=>
+        string(18) "GTK_RC_TOKEN_CLASS"
+      }
+      [24]=>
+      array(2) {
+        ["name"]=>
+        string(6) "lowest"
+        ["value"]=>
+        string(19) "GTK_RC_TOKEN_LOWEST"
+      }
+      [25]=>
+      array(2) {
+        ["name"]=>
+        string(3) "gtk"
+        ["value"]=>
+        string(16) "GTK_RC_TOKEN_GTK"
+      }
+      [26]=>
+      array(2) {
+        ["name"]=>
+        string(11) "application"
+        ["value"]=>
+        string(24) "GTK_RC_TOKEN_APPLICATION"
+      }
+      [27]=>
+      array(2) {
+        ["name"]=>
+        string(5) "theme"
+        ["value"]=>
+        string(18) "GTK_RC_TOKEN_THEME"
+      }
+      [28]=>
+      array(2) {
+        ["name"]=>
+        string(2) "rc"
+        ["value"]=>
+        string(15) "GTK_RC_TOKEN_RC"
+      }
+      [29]=>
+      array(2) {
+        ["name"]=>
+        string(7) "highest"
+        ["value"]=>
+        string(20) "GTK_RC_TOKEN_HIGHEST"
+      }
+      [30]=>
+      array(2) {
+        ["name"]=>
+        string(6) "engine"
+        ["value"]=>
+        string(19) "GTK_RC_TOKEN_ENGINE"
+      }
+      [31]=>
+      array(2) {
+        ["name"]=>
+        string(11) "module-path"
+        ["value"]=>
+        string(24) "GTK_RC_TOKEN_MODULE_PATH"
+      }
+      [32]=>
+      array(2) {
+        ["name"]=>
+        string(14) "im-module-path"
+        ["value"]=>
+        string(27) "GTK_RC_TOKEN_IM_MODULE_PATH"
+      }
+      [33]=>
+      array(2) {
+        ["name"]=>
+        string(14) "im-module-file"
+        ["value"]=>
+        string(27) "GTK_RC_TOKEN_IM_MODULE_FILE"
+      }
+      [34]=>
+      array(2) {
+        ["name"]=>
+        string(5) "stock"
+        ["value"]=>
+        string(18) "GTK_RC_TOKEN_STOCK"
+      }
+      [35]=>
+      array(2) {
+        ["name"]=>
+        string(3) "ltr"
+        ["value"]=>
+        string(16) "GTK_RC_TOKEN_LTR"
+      }
+      [36]=>
+      array(2) {
+        ["name"]=>
+        string(3) "rtl"
+        ["value"]=>
+        string(16) "GTK_RC_TOKEN_RTL"
+      }
+      [37]=>
+      array(2) {
+        ["name"]=>
+        string(5) "color"
+        ["value"]=>
+        string(18) "GTK_RC_TOKEN_COLOR"
+      }
+      [38]=>
+      array(2) {
+        ["name"]=>
+        string(6) "unbind"
+        ["value"]=>
+        string(19) "GTK_RC_TOKEN_UNBIND"
+      }
+      [39]=>
+      array(2) {
+        ["name"]=>
+        string(4) "last"
+        ["value"]=>
+        string(17) "GTK_RC_TOKEN_LAST"
+      }
+    }
+  }
+  ["PathPriorityType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(19) "GtkPathPriorityType"
+    ["gtype-id"]=>
+    string(27) "GTK_TYPE_PATH_PRIORITY_TYPE"
+    ["values"]=>
+    array(6) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "lowest"
+        ["value"]=>
+        string(20) "GTK_PATH_PRIO_LOWEST"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(3) "gtk"
+        ["value"]=>
+        string(17) "GTK_PATH_PRIO_GTK"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(11) "application"
+        ["value"]=>
+        string(25) "GTK_PATH_PRIO_APPLICATION"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(5) "theme"
+        ["value"]=>
+        string(19) "GTK_PATH_PRIO_THEME"
+      }
+      [4]=>
+      array(2) {
+        ["name"]=>
+        string(2) "rc"
+        ["value"]=>
+        string(16) "GTK_PATH_PRIO_RC"
+      }
+      [5]=>
+      array(2) {
+        ["name"]=>
+        string(7) "highest"
+        ["value"]=>
+        string(21) "GTK_PATH_PRIO_HIGHEST"
+      }
+    }
+  }
+  ["PathType"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(11) "GtkPathType"
+    ["gtype-id"]=>
+    string(18) "GTK_TYPE_PATH_TYPE"
+    ["values"]=>
+    array(3) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(6) "widget"
+        ["value"]=>
+        string(15) "GTK_PATH_WIDGET"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(12) "widget-class"
+        ["value"]=>
+        string(21) "GTK_PATH_WIDGET_CLASS"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(5) "class"
+        ["value"]=>
+        string(14) "GTK_PATH_CLASS"
+      }
+    }
+  }
+  ["ExpanderStyle"]=>
+  array(4) {
+    ["in-module"]=>
+    string(3) "Gtk"
+    ["c-name"]=>
+    string(16) "GtkExpanderStyle"
+    ["gtype-id"]=>
+    string(23) "GTK_TYPE_EXPANDER_STYLE"
+    ["values"]=>
+    array(4) {
+      [0]=>
+      array(2) {
+        ["name"]=>
+        string(9) "collapsed"
+        ["value"]=>
+        string(22) "GTK_EXPANDER_COLLAPSED"
+      }
+      [1]=>
+      array(2) {
+        ["name"]=>
+        string(14) "semi-collapsed"
+        ["value"]=>
+        string(27) "GTK_EXPANDER_SEMI_COLLAPSED"
+      }
+      [2]=>
+      array(2) {
+        ["name"]=>
+        string(13) "semi-expanded"
+        ["value"]=>
+        string(26) "GTK_EXPANDER_SEMI_EXPANDED"
+      }
+      [3]=>
+      array(2) {
+        ["name"]=>
+        string(8) "expanded"
+        ["value"]=>
+        string(21) "GTK_EXPANDER_EXPANDED"
+      }
+    }
+  }
+}

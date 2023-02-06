@@ -12,14 +12,16 @@
 ### Parse def file
 - [x] Read and organize the vector of objects
 - [ ] Read and organize the vector of enums
-- [ ] Read and organize the vector of functions
+- [ ] Create a cache file
+- [ ] Create a way to read new def file and update the cache, to do version upgrade
 
 ### Code gen
-- [ ] Better parse of parameters, to verify if param is null for example
-- [ ] Test throw exceptions on errors
+- [ ] Utilize native language for errors and exceptions
+- [ ] Better parse of parameters and throw exceptions on errors
+- [ ] Use namesapces of classes
 - [ ] Create GObject manualy
-- [x] Create a way to rewrite a method manualy
-- [ ] Try implement of PHP-CPP
+- [ ] Create a way to rewrite a method manualy
+- [ ] Create a list of methods to set it as "NOT IMPLEMENTED YET"
 
 ### Compile
 - [ ] Compile for linux

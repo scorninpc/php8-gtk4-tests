@@ -150,6 +150,7 @@ class DefsParser
 	 */
 	static public function get_method_type($method)
 	{
+		
 		// if return none, possible set type
 		if($method['return-type'] == "none") {
 
@@ -162,7 +163,12 @@ class DefsParser
 			foreach($method['parameters'] as $parameter) {
 
 				// verify if parameters has any reference parameter 
-				if(strpos($parameter['type'], "**") !== FALSE) {
+				// if(strpos($parameter['type'], "**") !== FALSE) {
+				// 	return DefsParser::TYPE_GETBYREF;
+				// }
+
+				// verify if parameters has any reference parameter 
+				if(in_array($parameter['type'], ["int*", "long*", "gint*", "glong*", "guint*", "gulong*"])) {
 					return DefsParser::TYPE_GETBYREF;
 				}
 

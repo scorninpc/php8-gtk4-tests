@@ -97,6 +97,11 @@ $classes = $objects;
 $pos = 0;
 while($pos < count($classes)-1) {
 
+	if((isset($classes[$pos]['parent'])) && ($classes[$pos]['parent'] == "GInitiallyUnowned")) {
+		$classes[$pos]['parent'] = "GObject";
+	}
+	
+
 	// if not has parent
 	if(!isset($classes[$pos]['parent'])) {
 
@@ -150,7 +155,7 @@ $class_header_template = file_get_contents(PATH . "/srcgen/templates/class.h.tem
 // loop classes
 foreach($classes as $class) {
 
-	if($class['c-name'] != "GtkWidget") {
+	if(!in_array($class['c-name'], ["GtkWidget", "GtkContainer", "GtkBin", "GtkWindow"])) {
 		continue;
 	}
 
@@ -236,7 +241,10 @@ foreach($classes as $class) {
 
 			 // simple get
 			else if($type == DefsParser::TYPE_GETTER) {
+				
+				// $method_code .= parseReturn($method['return-type']);
 				$method_code .= "getter";
+
 			}
 
 			// simple set

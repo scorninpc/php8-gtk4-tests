@@ -142,7 +142,9 @@ class DefsParser
 			}
 		}
 
-		return $parsed;
+		$this->parsed = $parsed;
+
+		return $this->parsed;
 	}
 
 	/**
@@ -194,5 +196,164 @@ class DefsParser
 		}
 
 		return FALSE;
+	}
+
+	/**
+	 * parse parameter
+	 */
+	function parseParam($count, $param_name, $param_type)
+	{
+		global $parsed;
+
+		// Remove constant key
+		// $type = getCleanType($param_type, FALSE);
+		$type = $param_type;
+		$name = $param_name;
+		
+		$template_code = "";
+
+		// Verifica o tipo
+		switch($type) {
+
+			// String
+			case "gchar*":
+				$template_code .= "\n\tstd::string c_%(param_name)s = parameters[%(param_count)s];\n";
+				$template_code .= "\n\tgchar *%(param_name)s = (gchar *)c_%(param_name)s.c_str();";
+				break;
+
+			// Float
+			case "gfloat":
+				$template_code .= "\n\tdouble d_%(param_name)s = parameters[%(param_count)s];\n";
+				$template_code .= "\n\tgfloat %(param_name)s = (float)d_%(param_name)s;";
+				break;
+
+			// ponter
+			case "guint*":
+				$template_code .= "\n\t%(type)s %(param_name)s;";
+				break;
+
+			//
+			case "guint":
+				$template_code .= "\n\tint %(param_name)s = (int)parameters[%(param_count)s];";
+				break;
+
+			// Some simple casts
+			case "gint":
+			case "gboolean":
+				$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s)parameters[%(param_count)s];";
+				break;
+
+			// Others
+			default:
+
+				if($this->isClass($type)) {
+					if($type[-1] == "*") {
+						$type = substr($type, 0, -1);
+					}
+					
+					$cast_method = strtoupper(implode("_", Strings::explode_camelcase($type)));
+
+					$template_code .= "\n\t" . $type . " *%(param_name)s;";
+					// $template_code .= "if(parameters.size() > 0) {";
+					$template_code .= "\n\tPhp::Value object_%(param_name)s = parameters[%(param_count)s];";
+					$template_code .= "\n\t" . $type . "_ *phpgtk_%(param_name)s = (" . $type . "_ *)object_%(param_name)s.implementation();";
+					$template_code .= "\n\t%(param_name)s = " . $cast_method . "(phpgtk_%(param_name)s->get_instance());";
+					// $template_code .= "}";
+				}
+
+				if($this->isEnum($type)) {
+					$template_code .= "\n\tint int_%(param_name)s = parameters[%(param_count)s];";
+					$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s) int_%(param_name)s;";
+				}
+
+				if($this->isFlag($type)) {
+					$template_code .= "\n\tint int_%(param_name)s = parameters[%(param_count)s];";
+					$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s) int_%(param_name)s;";
+				}
+
+				// elseif(isClass($type)) {
+
+				
+				// }
+				// else {
+				// 	die($type . " [" . $name . "] cannot be parsed on parseParam function [" . __FILE__ . ":" . __LINE__ . "]\n");
+				// }
+		}
+
+		$result_code = Strings::sprintf_named($template_code, [
+			'param_count' => $count,
+			'param_name' => $name,
+			'type' => $type,
+		]);
+
+		return $result_code;
+	}
+
+	/**
+	 * verify if type is a class
+	 */
+	public function isClass($type)
+	{
+		// verify if it's a pointer
+		if($type[-1] == "*") {
+			$type = substr($type, 0, -1);
+		}
+		if(isset($this->parsed['object'][$type])) {
+			return TRUE;
+		}
+	}
+
+	/**
+	 * verify if type is enum
+	 */
+	public function isEnum($type)
+	{
+		if(isset($this->parsed['enum'][$type])) {
+			return TRUE;
+		}
+	}
+
+	/**
+	 * verify if type is a flag
+	 */
+	public function isFlag($type)
+	{
+		if(isset($this->parsed['flags'][$type])) {
+			return TRUE;
+		}
+	}
+
+	/**
+	 * parse return type
+	 */
+	public function parseReturn($type)
+	{
+		// verify the type
+		switch($type) {
+			// normal returns
+			case "gchar*":
+			case "gfloat":
+			case "gint":
+			case "gboolean":
+				return "\n\treturn ret;";
+			
+			case "guint":
+				return "\n\treturn (int)ret;";
+
+			// this can be any class, not enum, not interface
+			// @todo need to verify on array of classes if its exists
+			default:
+				
+				if($this->isClass($type)) {
+					if($type[-1] == "*") {
+						$type = substr($type, 0, -1);
+					}
+					
+					$str = "\n";
+					$str .= "\n\treturn cobject_to_phpobject(ret);";
+
+					return $str;
+				}
+		}
 	}
 }

@@ -73,6 +73,20 @@ foreach($parsed['method'] as $method_name => $method) {
 		
 // @todo ver o que fazer com as funções, se da pra dar um parse e achar o objeto, ou se coloca a função no namespace
 
+// loop functions to find constructors
+foreach($parsed['function'] as $function_name => $function) {
+	if(isset($function['is-constructor-of'])) {
+
+		$class_name = $function['is-constructor-of'];
+
+		if(isset($classes[$class_name])) {
+			$classes[$class_name]['methods'][$function_name] = $function;
+			unset($parsed['function'][$function_name]);
+		}
+	}
+
+}
+
 // @todo ver o qeu fazer com os enums
 
 // @todo ver o qeu fazer com os flags
@@ -155,7 +169,8 @@ $class_header_template = file_get_contents(PATH . "/srcgen/templates/class.h.tem
 // loop classes
 foreach($classes as $class) {
 
-	if(!in_array($class['c-name'], ["GtkWidget", "GtkContainer", "GtkBin", "GtkWindow"])) {
+	// if(!in_array($class['c-name'], ["GtkWidget", "GtkContainer", "GtkBin", "GtkWindow", "GtkTable"])) {
+	if(!in_array($class['c-name'], ["GtkTable"])) {
 		continue;
 	}
 
@@ -183,18 +198,27 @@ foreach($classes as $class) {
 		// store method name and c-name
 		$method_name = $method['name'];
 		$method_cname = $method['c-name'];
-		
+
 		// clear the method vars
-		$template_vars['method_name'] = $method_name;
+		$template_vars['method_name'] = "";
 		$template_vars['method_code'] = "";
 		$template_vars['method_return'] = "";
 		$template_vars['method_parameter'] = "";
 		$method_code = "";
 
+
+		
 		// verify if is a constructor
-		if($method['is-constructor-of']??"" == $method_cname) {
+		if($method['is-constructor-of']??"" == $template_vars['classname']) {
 			$method_name = "__construct";
 		}
+
+		// verify if is a constructor
+		if($method_name == "new") {
+			$method_name = "__construct";
+		}
+
+		$template_vars['method_name'] = $method_name;
 
 		// verify if has parameters
 		if(count($method['parameters']??[]) > 0) {
@@ -202,7 +226,11 @@ foreach($classes as $class) {
 		}
 
 		// verify if has return
-		if($method['return-type'] == "none") {
+		// parse return of c function
+		if($parser->get_method_type($method) == DefsParser::TYPE_GETBYREF) { 
+			$template_vars['method_return'] = "Php::Value";
+		}
+		else if($method['return-type'] == "none") {
 			$template_vars['method_return'] = "void";
 		}
 		else if($method_name == "__construct")
@@ -225,55 +253,65 @@ foreach($classes as $class) {
 		}
 		else {
 
-			$type = DefsParser::get_method_type($method);
-			
-			// only a caller
-			if($type == DefsParser::TYPE_CALLER) { 
-				$method_code .= "" . $method_cname . "(";
+			// parse parameters
+			foreach($method['parameters']??[] as $count => $parameter) {
+				$method_code .= $parser->parseParam($count, $parameter['name'], $parameter['type']) . "\n";
+			}
 
-				if($method_name != "__construct") {
-					$hasparam = true;
-					$method_code .= $cast_method . "(instance)";
+			// verify if has return of c function
+			if($method['return-type'] == "none") {
+				$method_code .= "\n\t";
+			}
+			else if($method_name == "__construct") {
+				$method_code .= "\n\tinstance = (gpointer *)";
+			}
+			else if($parser->isClass($method['return-type'])) {
+				$method_code .= "\n\tgpointer *ret = (gpointer *)";
+			}
+			else { 
+				$method_code .= "\n\t" . $method['return-type'] . " ret = ";
+			}
+			
+			// call the c function
+			$method_code .= $method['c-name'] . "(";
+			$hasparam = false;
+
+			if($method_name != "__construct") {
+				$hasparam = true;
+				$method_code .= $cast_method . "(instance), ";
+			}
+
+			foreach($method['parameters']??[] as $count => $parameter) {
+				$hasparam = true;
+				$method_code .= $parameter['name'] . ", ";
+			}
+			if($hasparam) {
+				$method_code = substr($method_code, 0, strlen($method_code) - 2);
+			}
+			$method_code .= ");";
+
+			// parse return of c function
+			if($parser->get_method_type($method) == DefsParser::TYPE_GETBYREF) {
+
+				$method_code .= "\n\n\tPhp::Value arr;";
+
+				// parse parameters
+				foreach($method['parameters']??[] as $count => $parameter) {
+					if(in_array($parameter['type'], ["int*", "long*", "gint*", "glong*", "guint*", "gulong*"])) {
+						$method_code .= "\n\tarr[\"" . $parameter['name'] . "\"] = " . $parameter['name'] . ";";
+					}
 				}
 
-				$method_code .= ");";
+				$method_code .= "\n\n\treturn arr;";
 			}
-
-			 // simple get
-			else if($type == DefsParser::TYPE_GETTER) {
-				
-				// $method_code .= parseReturn($method['return-type']);
-				$method_code .= "getter";
-
+			else if($method['return-type'] == "none") {
+				$method_code .= "";
 			}
-
-			// simple set
-			else if($type == DefsParser::TYPE_SETTER) { 
-				$method_code .= "setter";
+			else if($method_name == "__construct") {
+				$method_code .= "";
 			}
-
-			// get with reference parameter
-			else if($type == DefsParser::TYPE_GETBYREF) { 
-				$method_code .= "getter by reference";
-			}
-
-			// list return
-			else if($type == DefsParser::TYPE_LIST) {
-				$method_code .= "return a list";
-			}
-
-			// callback 
-			else if($type == DefsParser::TYPE_CALLBACK) {
-				$method_code .= "callback";
-				// @todo work on callbacks
-				continue; 
-			}
-			else {
-				echo "\n";
-				echo "-------------------------\n";
-				echo "problem on get method type\n";
-				echo var_dump($method);
-				die();
+			else { 
+				$method_code .= "\n" . $parser->parseReturn($method['return-type']);
 			}
 
 			// add code of method
@@ -282,9 +320,10 @@ foreach($classes as $class) {
 			
 			// add definitions of method
 			$code_h_methods .= Strings::sprintf_named($method_header_template, $template_vars);
-			
+		
+			// add method to extension
+			// echo $template_vars['lower_classname'] . ".method<&" . $template_vars['classname'] . "_::" . $method_name . ">(\"" . $method_name . "\");\n";
 		}
-
 
 	}
 
@@ -300,6 +339,8 @@ foreach($classes as $class) {
 	$code_phpclasses .= Strings::sprintf_named($phpclasses_template, $template_vars);
 	$code_extensions .= Strings::sprintf_named($phpextension_template, $template_vars);
 
+	// echo $code_phpclasses . "\n\n";
+	// echo $code_extensions . "\n";
 	// include to main.h
 
 }

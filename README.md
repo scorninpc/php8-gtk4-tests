@@ -20,6 +20,7 @@
 - [ ] Create GObject manualy
 - [x] Create a way to rewrite a method manualy
 - [ ] Try implement of PHP-CPP
+- [ ] Alguns parametros e retornos do tipo int gboolean, string, funcionam direto, sem precisar dar cast, verificar o que funciona direto `parameters[0]` como parametro na função C e o que da pra retornar direto `Note: verificara o metodo GtkEntry::set_text()` para compreender
 
 ### Compile
 - [ ] Compile for linux

@@ -1,0 +1,62 @@
+
+#include "main.h"
+
+/**
+ *  tell the compiler that the get_module is a pure C function
+ */
+extern "C"
+{
+
+	/**
+	 *  Function that is called by PHP right after the PHP process has started, and that returns an address of an internal PHP
+	 *  strucure with all the details and features of your extension
+	 */
+	PHPCPP_EXPORT void *get_module()
+	{
+		// static(!) Php::Extension object that should stay in memory for the entire duration of the process (that's why it's static)
+		static Php::Extension extension("gtk3", "1.0");
+
+		// GObject
+		Php::Class<GObject_> gobject("GObject");
+			gobject.method<&GObject_::connect>("connect");
+			gobject.method<&GObject_::connect_after>("connect_after");
+			gobject.method<&GObject_::handler_disconnect>("handler_disconnect");
+			gobject.method<&GObject_::is_connected>("is_connected");
+			gobject.method<&GObject_::get_property>("get_property");
+			gobject.method<&GObject_::set_property>("set_property");
+			gobject.method<&GObject_::signal_handler_block>("signal_handler_block");
+			gobject.method<&GObject_::signal_handler_unblock>("signal_handler_unblock");
+			gobject.constant("TYPE_INVALID", (int)G_TYPE_INVALID);
+			gobject.constant("TYPE_NONE", (int)G_TYPE_NONE);
+			gobject.constant("TYPE_INTERFACE", (int)G_TYPE_INTERFACE);
+			gobject.constant("TYPE_CHAR", (int)G_TYPE_CHAR);
+			gobject.constant("TYPE_UCHAR", (int)G_TYPE_UCHAR);
+			gobject.constant("TYPE_BOOLEAN", (int)G_TYPE_BOOLEAN);
+			gobject.constant("TYPE_INT", (int)G_TYPE_INT);
+			gobject.constant("TYPE_UINT", (int)G_TYPE_UINT);
+			gobject.constant("TYPE_LONG", (int)G_TYPE_LONG);
+			gobject.constant("TYPE_ULONG", (int)G_TYPE_ULONG);
+			gobject.constant("TYPE_INT64", (int)G_TYPE_INT64);
+			gobject.constant("TYPE_UINT64", (int)G_TYPE_UINT64);
+			gobject.constant("TYPE_ENUM", (int)G_TYPE_ENUM);
+			gobject.constant("TYPE_FLAGS", (int)G_TYPE_FLAGS);
+			gobject.constant("TYPE_FLOAT", (int)G_TYPE_FLOAT);
+			gobject.constant("TYPE_DOUBLE", (int)G_TYPE_DOUBLE);
+			gobject.constant("TYPE_STRING", (int)G_TYPE_STRING);
+			gobject.constant("TYPE_PIXBUF", (int)GDK_TYPE_PIXBUF);
+			gobject.constant("TYPE_POINTER", (int)G_TYPE_POINTER);
+			gobject.constant("TYPE_BOXED", (int)G_TYPE_BOXED);
+			gobject.constant("TYPE_PARAM", (int)G_TYPE_PARAM);
+			gobject.constant("TYPE_OBJECT", (int)G_TYPE_OBJECT);
+			gobject.constant("TYPE_GTYPE", (int)G_TYPE_GTYPE);
+			gobject.constant("TYPE_VARIANT", (int)G_TYPE_VARIANT);
+			gobject.constant("TYPE_CHECKSUM", (int)G_TYPE_CHECKSUM);
+
+		%(code_phpclasses)s
+
+		extension.add(std::move(gobject));
+		%(code_extensions)s
+
+		return extension;
+	}
+}

@@ -44,6 +44,31 @@ class DefsParser
 		$tmp_options = [];
 		$parsed = [];
 
+		$parsed['struct']['GdkRGBA'] = [
+			'red' => "gdouble",
+			'green' => "gdouble",
+			'blue' => "gdouble",
+			'alpha' => "gdouble",
+		];
+
+		$parsed['object']['GdkDevice'] = [
+			'parent' => "GObject",
+			'c-name' => "GdkDevice",
+			'in-module' => "Gdk",
+		];
+
+		$parsed['object']['GdkVisual'] = [
+			'parent' => "GObject",
+			'c-name' => "GdkVisual",
+			'in-module' => "Gdk",
+		];
+
+		$parsed['object']['GdkDisplay'] = [
+			'parent' => "GObject",
+			'c-name' => "GdkDisplay",
+			'in-module' => "Gdk",
+		];
+		
 		// explode blocks
 		foreach(preg_split($this->regex['block'], $this->content) as $line) {
 			$lineno++;
@@ -110,6 +135,26 @@ class DefsParser
 					if(count($tmp_values) > 0) {
 						$parsed[$tmp_type][$tmp_options['c-name']]['values'] = $tmp_values;
 					}
+
+					// verify if its a function
+					if($tmp_type == "function") {
+
+						// verify if its a function of 
+						$function = $parsed[$tmp_type][$tmp_options['c-name']];
+						if(isset($function['of-object'])) {
+							if(in_array($function['of-object'], ["GdkDevice", "GdkVisual", "GdkDisplay"])) {
+
+								$class_name = $function['of-object'];
+								$function_name = $function['name'];
+					
+								$parsed[$class_name]['methods'][$function_name] = $function;
+								unset($parsed[$tmp_type][$tmp_options['c-name']]);
+							}
+						}
+
+					}
+
+
 
 					// restart
 					$tmp_type = NULL;
@@ -212,18 +257,21 @@ class DefsParser
 		
 		$template_code = "";
 
+
 		// Verifica o tipo
 		switch($type) {
 
 			// String
 			case "gchar*":
-				$template_code .= "\n\tstd::string c_%(param_name)s = parameters[%(param_count)s];\n";
+			case "const-gchar*":
+				$template_code .= "\n\tstd::string c_%(param_name)s = parameters[%(param_count)s];";
 				$template_code .= "\n\tgchar *%(param_name)s = (gchar *)c_%(param_name)s.c_str();";
 				break;
 
 			// Float
 			case "gfloat":
-				$template_code .= "\n\tdouble d_%(param_name)s = parameters[%(param_count)s];\n";
+			case "double":
+				$template_code .= "\n\tdouble d_%(param_name)s = parameters[%(param_count)s];";
 				$template_code .= "\n\tgfloat %(param_name)s = (float)d_%(param_name)s;";
 				break;
 
@@ -246,6 +294,9 @@ class DefsParser
 			// Others
 			default:
 
+				// if($name == "device") {
+				// 	die($type);
+				// }
 				if($this->isClass($type)) {
 					if($type[-1] == "*") {
 						$type = substr($type, 0, -1);
@@ -261,14 +312,29 @@ class DefsParser
 					// $template_code .= "}";
 				}
 
-				if($this->isEnum($type)) {
+				else if($this->isEnum($type)) {
 					$template_code .= "\n\tint int_%(param_name)s = parameters[%(param_count)s];";
 					$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s) int_%(param_name)s;";
 				}
 
-				if($this->isFlag($type)) {
+				else if($this->isFlag($type)) {
 					$template_code .= "\n\tint int_%(param_name)s = parameters[%(param_count)s];";
 					$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s) int_%(param_name)s;";
+				}
+
+				else if($this->isStruct($type)) {
+					$type = str_replace("const-", "", $type);
+					if($type[-1] == "*") {
+						$type = substr($type, 0, -1);
+					}
+					
+					$template_code .= "\n\t" . $type . " %(param_name)s = {";
+					$count = 0;
+					foreach($this->parsed['struct'][$type] as $part) {
+						$template_code .= "parameters[%(param_count)s][" . $count++ . "], ";
+					}
+					$template_code = substr($template_code, 0, -2);
+					$template_code .= " };";
 				}
 
 				// elseif(isClass($type)) {
@@ -304,6 +370,22 @@ class DefsParser
 	}
 
 	/**
+	 * verify if type is a struct
+	 */
+	public function isStruct($type)
+	{
+		$type = str_replace("const-", "", $type);
+
+		// verify if it's a pointer
+		if($type[-1] == "*") {
+			$type = substr($type, 0, -1);
+		}
+		if(isset($this->parsed['struct'][$type])) {
+			return TRUE;
+		}
+	}
+
+	/**
 	 * verify if type is enum
 	 */
 	public function isEnum($type)
@@ -328,6 +410,8 @@ class DefsParser
 	 */
 	public function parseReturn($type)
 	{
+		$str = "";
+
 		// verify the type
 		switch($type) {
 			// normal returns
@@ -340,18 +424,31 @@ class DefsParser
 			case "guint":
 				return "\n\treturn (int)ret;";
 
+			case "GList*":
+				$str = "\n\n\treturn glist_to_phparray(ret);";
+				return $str;
+
 			// this can be any class, not enum, not interface
 			// @todo need to verify on array of classes if its exists
 			default:
 				
 				if($this->isClass($type)) {
-					if($type[-1] == "*") {
-						$type = substr($type, 0, -1);
-					}
-					
-					$str = "\n";
-					$str .= "\n\treturn cobject_to_phpobject(ret);";
+					$str = "\n\n\treturn cobject_to_phpobject(ret);";
+					return $str;
+				}
 
+				else if($this->isEnum($type)) {
+					$str = "\n\n\treturn (int)ret;";
+					return $str;
+				}
+
+				else if($this->isFlag($type)) {
+					$str = "\n\n\treturn (int)ret;";
+					return $str;
+				}
+
+				else {
+					$str = "\n\n\treturn ret;";
 					return $str;
 				}
 		}

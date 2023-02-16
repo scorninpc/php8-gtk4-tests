@@ -195,4 +195,27 @@ Php::Value GtkWidget_::translate_coordinates(Php::Parameters &parameters)
 ",
 
 
+
+// gtk_widget_style_get_property
+'gtk_widget_style_get_property' => "
+Php::Value GtkWidget_::style_get_property(Php::Parameters &parameters)
+{
+	
+	GValue value;
+
+	memset (&value, 0, sizeof (GValue));
+	g_value_init( &value, G_TYPE_INT );
+
+	std::string c_property_name = parameters[0];
+	gchar *property_name = (gchar *)c_property_name.c_str();
+
+	gtk_widget_style_get_property(GTK_WIDGET(instance), property_name, &value);
+
+	return gvalue_to_phpvalue(&value);
+}
+",
+
+
+
+
 ];

@@ -51,6 +51,13 @@ class DefsParser
 			'alpha' => "gdouble",
 		];
 
+		$parsed['struct']['GdkColor'] = [
+			'pixel' => "guint32",
+			'red' => "guint32",
+			'green' => "guint32",
+			'blue' => "guint32",
+		];
+
 		$parsed['object']['GdkDevice'] = [
 			'parent' => "GObject",
 			'c-name' => "GdkDevice",
@@ -312,7 +319,7 @@ class DefsParser
 					// $template_code .= "}";
 				}
 
-				else if($this->isEnum($type)) {
+				else if(($this->isEnum($type)) || ($type == "GType")) {
 					$template_code .= "\n\tint int_%(param_name)s = parameters[%(param_count)s];";
 					$template_code .= "\n\t%(type)s %(param_name)s = (%(type)s) int_%(param_name)s;";
 				}
@@ -329,10 +336,12 @@ class DefsParser
 					}
 					
 					$template_code .= "\n\t" . $type . " %(param_name)s = {";
-					$count = 0;
+					$count_inline = 0;
 					foreach($this->parsed['struct'][$type] as $part) {
-						$template_code .= "parameters[%(param_count)s][" . $count++ . "], ";
+						$template_code .= "parameters[%(param_count)s][" . $count_inline++ . "], ";
 					}
+					// o problema de usar esse metod é que ele é passado por referencia na função, por exemplo &color
+
 					$template_code = substr($template_code, 0, -2);
 					$template_code .= " };";
 				}

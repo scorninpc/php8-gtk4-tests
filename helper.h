@@ -9,5 +9,6 @@
 
 	Php::Value cobject_to_phpobject(gpointer *cobject);
 	Php::Value glist_to_phparray(GList *glist);
+	Php::Value gvalue_to_phpvalue(GValue *gvalue);
 
 #endif

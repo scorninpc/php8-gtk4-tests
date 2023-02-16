@@ -35,7 +35,7 @@ echo count($parsed['function']) . " functions found\n";
 echo count($parsed['method']) . " methods found\n";
 
 // var_dump($parsed['object']);
-// var_dump($parsed['enum']);
+// var_dump(reset($parsed['enum']));
 // var_dump($parsed['flags']);
 // var_dump($parsed['function']);
 // var_dump($parsed['method']);
